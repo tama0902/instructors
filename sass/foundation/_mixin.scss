@@ -22,4 +22,20 @@ $pc:1024px;/*PCサイズ */
   justify-content: center;
   flex-direction: row-reverse;
 }
-
+//H2見出しタグの擬似要素_下の白色のバー
+@mixin underbar{
+	position:absolute;
+	width:40px;
+	height:1px;
+	content:"";
+	bottom:0;
+	right:50%;
+	transform:translateX(50%);
+	background-color: rgb(255, 255, 255);
+  }
+  //左側の画像
+@mixin h2-image{
+	display:block;
+	width:115px;
+	transform: translateY(-16px);
+  }

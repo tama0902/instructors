@@ -4,30 +4,85 @@
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
+
 .question {
 	font-family: v.$base_font;
 	background-color: #44bed5;
+	padding:0 16px;
+	position: fixed;
+	background-image: url('../../assets/img/dotBox_question.png');
+	@include m.pc{
+	background-image: url('../../assets/img/dotBox_question_pc.png');
+  }
+	&__titleWrap{
+		@include m.h2-titleWrap;
+		@include m.pc{
+			font-size: 33px;;
+		}
+	}
+	  &__titleWrap::before{
+		@include m.underbar;
+		}
+	  &__title{
+		@include m.h2-title;
+	}
+		&__image{
+		@include m.h2-image;
+		}
+		//.layout1,
+		//.layout2,
+		//.layout3,
+		//.layout4,
+		//.layout5 {
+			//padding: 80px 16px;
+		//}
+		.layout3 {
+			padding: 0 24px;
+		}
+}
+.questionLists {
+	@include m.pc {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			width: calc(100% / 3);
+		}
+	}
+	&__item {
+		height: 88px;
+		@include m.pc {
+			width: calc(96% / 3);
+			margin: 16px auto 0;
+		}
+		&:nth-of-type(n+2) {
+			margin-top: 16px;
+		}
+	}
 }
 .questionList {
 	list-style: none;
 	background-color: #FFF;
 	border-radius: 16px;
 	padding: 16px;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 58px;
+		height: 8px;
+		border-bottom: 1px solid #3A61BD;
+		border-right: 1px solid #3A61BD;
+		transform: skew(45deg);
+		bottom: 24px;
+		right: 24px;
+		pointer-events: none;
+	}
 	&__title {
 		color: #446fc8;
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			width: 58px;
-			height: 8px;
-			border-bottom: 1px solid #3A61BD;
-			border-right: 1px solid #3A61BD;
-			transform: skew(45deg);
-			bottom: 0;
-			right: 0;
-			pointer-events: none;
-		}
 	}
 }
 .questionModal {
@@ -165,4 +220,19 @@
 	height: 100%;
 	background: #98a6b5;
 	transform: rotate(90deg);
+}
+
+#bg-video {
+	//position: fixed;
+	z-index: -100;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+.video-area {
+	position: relative;
+	z-index: 2;
 }

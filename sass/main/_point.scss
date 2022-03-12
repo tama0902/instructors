@@ -7,6 +7,14 @@
 .point {
 	font-family: v.$base_font;
 	color: v.$base_color;
+	padding: 0 16px;
+		.layout3 {
+			background-image: url('../../assets/img/cyberBox.png');
+			background-position: center;
+			@include m.pc{
+			background-image: url('../../assets/img/cyberBox_pc.png');
+		}
+	}
 	&__tag {
 		font-size: 50px;
 		font-weight: 600;
@@ -26,13 +34,39 @@
 	}
 	&__content {
 		line-height: v.$base_l-height;
+		margin: 0 auto;
+		text-align: center;
+		display: block;
 		&--txt {
-			padding: 32px 24px 24px;
+			text-align: left;
+			display: inline-block;
+			padding: 80px 24px 24px;
+			@include m.pc {
+				padding: 80px 264px 24px;
+			}
 		}
 	}
 	&__list {
 		line-height: v.$base_l-height;
+		margin-top: 80px;
 		counter-reset: number;
+		@include m.pc {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			position: relative;
+			&::after {
+				content: "";
+				display: block;
+				width: calc(100% / 3);
+			}
+		}
+		&--item {
+			@include m.pc {
+				width: calc(96% / 3);
+				margin: 16px auto 0;
+			}
+		}
 		&--title {
 			position: relative;
 			font-family: futura-pt-bold,sans-serif;
@@ -41,11 +75,12 @@
 			line-height: 26px;
 			display: flex;
 			counter-increment: number;
+			margin-left: 24px;
 			&::before {
 				content: "";
 				width: 4.8em;
 				height: 4.8em;
-				background: url(../../team/img/point_number.png) no-repeat;
+				background: url(../img/point_number.png) no-repeat;
 				background-size: contain;
 				display: inline-block;
 				margin-top: -30px;
@@ -75,7 +110,7 @@
 			color: #141d83;
 			font-size: 15px;
 			line-height: 23px;
-			padding: 40px 24px 24px;
+			padding: 40px 24px 80px;
 		}
 	}
 }

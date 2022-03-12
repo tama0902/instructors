@@ -1,6 +1,22 @@
 @use "../foundation/various" as v;
+@use '../foundation/mixin' as m;
+
 .container {
 	font-family: v.$base_font;
 	font-size: v.$base_size;
 	line-height: v.$base_l-height;
+	.sp {
+		display: block;
+	}
+	.pc {
+		display: none;
+	}
+	@include m.pc {
+		.sp {
+			display: none;
+		}
+		.pc {
+			display: block;
+		}
+	}
 }
