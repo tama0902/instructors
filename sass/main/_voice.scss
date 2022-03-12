@@ -1,0 +1,65 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+.voice {
+	background-color: #413DF1;
+	color: #FFF;
+	font-family: v.$base_font;
+	font-size: 14px;
+	z-index: -1;
+	padding: 24px 48px 48px;
+	&__title {
+		font-size: 15px;
+		text-align: center;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 10%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 2em auto ;
+			border-bottom: 2px solid #fff;
+
+		}
+	}
+	&__text {
+		line-height: v.$base_l-height;
+		position: relative;
+		padding: 24px 16px;
+		margin: 2em 0;
+		top: 0;
+		&::before {
+			position: absolute;
+			top: 0;
+			content: "";
+			width: 50px;
+			height: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+			border-left: solid 2px #FFF;
+			border-top: solid 2px #FFF;
+			border-bottom: solid 2px #FFF;
+			left: 0;
+		}
+		&::after {
+			position: absolute;
+			top: 0;
+			content: "";
+			width: 50px;
+			height: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+			border-top: solid 2px #FFF;
+			border-right: solid 2px #FFF;
+			border-bottom: solid 2px #FFF;
+			right: 0;
+		}
+
+	}
+}

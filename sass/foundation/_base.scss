@@ -1,0 +1,6 @@
+@use "../foundation/various" as v;
+.container {
+	font-family: v.$base_font;
+	font-size: v.$base_size;
+	line-height: v.$base_l-height;
+}

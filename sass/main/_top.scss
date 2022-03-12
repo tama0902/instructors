@@ -1,0 +1,16 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+.top {
+
+		.layout1,
+		.layout2,
+		.layout3,
+		.layout4,
+		.layout5 {
+			padding: 80px 16px;
+		}
+		
+}

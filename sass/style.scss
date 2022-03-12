@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/*====================
+  mixin
+====================*/
+@use 'foundation/_mixin';
+
+/*====================
+  layout
+====================*/
+@use 'foundation/_layout';
+
+/*====================
+  base
+====================*/
+@use 'foundation/_base';
+
+/*====================
+  various
+====================*/
+@use 'foundation/_various';
+
+/*====================
+  page
+====================*/
+
+@use 'parts/_main';
+@use './main/top';
+@use './main/box';
+@use './main/intro';
+@use './main/point';
+@use './main/question';
+@use './main/voice';
+@use './main/contact';
+@use './main/conversion';

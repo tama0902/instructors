@@ -1,0 +1,25 @@
+
+$pc:1024px;/*PCサイズ */
+@mixin pc{
+  @media screen and (min-width:$pc){/*  1024pxより大きい時 */
+    @content;
+  }
+}
+
+//H2見出し用
+@mixin h2-title{
+  color:white;
+    font-size:20px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    line-height: 1.5;
+}
+//H2見出しタグ囲い
+@mixin h2-titleWrap{
+  position:relative;
+  padding-top:60px;
+  display:flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+

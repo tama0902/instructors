@@ -1,0 +1,99 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+.contact {
+	font-family: v.$base_font;
+	color: v.$base_color;
+	background-color: #324658;
+	&__lead {
+		font-weight: 700;
+		 span {
+			background-color: #c6f21f;
+			padding: 8px 16px;
+			display: inline-block;
+			margin-bottom: 8px;
+		 }
+	}
+	&__list {
+		counter-reset: l-number;
+		counter-reset: r-number 3;
+		&--l {
+			position: relative;
+			counter-increment: l-number;
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				content: counter(l-number);
+				font-family: futura-pt-bold,sans-serif;
+				color: #FFF;
+				font-size: 130px;
+				font-weight: 900;
+				opacity: 0.24;
+			}
+		}
+		&--r {
+			position: relative;
+			counter-increment: r-number;
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+				content: counter(r-number);
+				font-family: futura-pt-bold,sans-serif;
+				color: #FFF;
+				font-size: 130px;
+				font-weight: 900;
+				opacity: 0.24;
+			}
+		}
+		&--title {
+			font-weight: 600;
+			color: #FFF;
+			font-size: 24px;
+			line-height: 32px;
+			display: flex;
+			justify-content: center;
+		}
+		&--text {
+			color: #FFF;
+			font-weight: 500;
+			position: relative;
+			padding: 1em;
+			&::before {
+				content: "";
+				width: 56px;
+				height:120px;
+				position: absolute;
+				border-left: solid 5px #FFF;
+				border-top: solid 5px #FFF;
+				border-image: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image-slice: 1;
+				top: 0;
+				left: 0;
+			}
+			&::after {
+				content: "";
+				width: 56px;
+				height:120px;
+				position: absolute;
+				border-right: solid 5px #FFF;
+				border-bottom: solid 5px #FFF;
+				border-image: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				border-image-slice: 1;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,168 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+.question {
+	font-family: v.$base_font;
+	background-color: #44bed5;
+}
+.questionList {
+	list-style: none;
+	background-color: #FFF;
+	border-radius: 16px;
+	padding: 16px;
+	&__title {
+		color: #446fc8;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 58px;
+			height: 8px;
+			border-bottom: 1px solid #3A61BD;
+			border-right: 1px solid #3A61BD;
+			transform: skew(45deg);
+			bottom: 0;
+			right: 0;
+			pointer-events: none;
+		}
+	}
+}
+.questionModal {
+	background-color: #FFF;
+	border-radius: 16px;
+	padding: 16px;
+	&__title {
+		color: #446fc8;
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 30%;
+			bottom: -16px;
+			right: 0;
+			left: 0;
+			margin: auto;
+			border-bottom: 4px solid #2c3d4d;
+		}
+	}
+	&__name {
+		font-size: 24px;
+		font-weight: 700;
+		&--ash {
+			font-size: 24px;
+			color: #141d83;
+		}
+		&--og {
+			font-size: 24px;
+			color: #38B6CE;
+		}
+	}
+	&__text {
+			font-size: v.$base_size;
+			color: #FFF;
+			border-radius: 8px;
+			padding: 24px 16px;
+		&--ash {
+			background-color: #141d83;
+		}
+		&--og {
+			background-color: #38B6CE;
+		}
+	}
+	&__button {
+		display: flex;
+		justify-content: space-between;
+		&--l {
+			width: 30px;
+			height: 30px;
+			border-radius: 50px;
+			background-color: v.$base_color;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto ;
+				width: 8px;
+				height: 8px;
+				transform: rotate(45deg);
+				border-bottom: solid 3px #FFF;
+				border-left: solid 3px #FFF;
+			}
+		}
+		&--r {
+			width: 30px;
+			height: 30px;
+			border-radius: 50px;
+			background-color: v.$base_color;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				width: 8px;
+				height: 8px;
+				transform: rotate(45deg);
+				border-top: solid 3px #FFF;
+				border-right: solid 3px #FFF;
+			}
+		}
+	}
+}
+.modal {
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg {
+	background: #000;
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content {
+	background-color: #FFF;
+	border-radius: 16px;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+}
+.close {
+	position: relative;
+	left: 95%;
+	display: inline-block;
+	width: 24px;
+	height: 2px;
+	background: #98a6b5;
+	transform: rotate(45deg);
+	vertical-align: middle;
+	text-align: right;
+}
+.close::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #98a6b5;
+	transform: rotate(90deg);
+}

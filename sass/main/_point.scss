@@ -1,0 +1,81 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+.point {
+	font-family: v.$base_font;
+	color: v.$base_color;
+	&__tag {
+		font-size: 50px;
+		font-weight: 600;
+		color: #1754c6;
+		opacity: 0.06;
+	}
+	&__title {
+		font-size: 28px;
+		color: #001429;
+		&--large {
+			font-size: 60px;
+			color: #1754C6;
+		}
+		&--b {
+			color: #1754C6;
+		}
+	}
+	&__content {
+		line-height: v.$base_l-height;
+		&--txt {
+			padding: 32px 24px 24px;
+		}
+	}
+	&__list {
+		line-height: v.$base_l-height;
+		counter-reset: number;
+		&--title {
+			position: relative;
+			font-family: futura-pt-bold,sans-serif;
+			color: #141d83;
+			font-size: 18px;
+			line-height: 26px;
+			display: flex;
+			counter-increment: number;
+			&::before {
+				content: "";
+				width: 4.8em;
+				height: 4.8em;
+				background: url(../../team/img/point_number.png) no-repeat;
+				background-size: contain;
+				display: inline-block;
+				margin-top: -30px;
+				margin-right: 10px;
+			}
+			&::after {
+				position: absolute;
+				display: block;
+				top: -30px;
+				left: 0;
+				content: counter(number, decimal-leading-zero);
+				font-size: 30px;
+				font-weight: 900;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 72px;
+				background: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				background: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				width: 72px;
+				height: 72px;
+			}
+		}
+		&--txt {
+			color: #141d83;
+			font-size: 15px;
+			line-height: 23px;
+			padding: 40px 24px 24px;
+		}
+	}
+}

@@ -1,0 +1,120 @@
+//mixin用
+@use '../foundation/mixin' as m;
+
+@use "../foundation/various" as v;
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+.intro {
+	font-family: v.$base_font;
+	&__teacher {
+		background-color: #f0f0f0;
+		position: relative;
+		z-index: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 100px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transform: skewY(-7deg);
+			z-index: -1;
+			background-color: #324658;
+		}
+	}
+	&__name {
+		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
+		font-weight: 900;
+		font-size: 90px;
+		color: #324658;
+		height: 90px;
+		position: absolute;
+		top: -50px;
+	}
+	&__ash {
+		position: relative;
+		span:nth-of-type(1){color:#446fc8}
+		span:nth-of-type(2){position: absolute; left: 90px;}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px;}
+		&::before {
+			content: "ASHIZAWA";
+			position: absolute;
+			top: 80px;
+			left: 0;
+			font-family: v.$base_font;
+			font-size: 100px;
+			font-weight: 900;
+			color: #324658;
+			opacity: 0.1;
+		}
+	}
+	&__ash--first {
+		position: relative;
+		&::before {
+			content: "あっしー";
+			position: absolute;
+			font-family: v.$base_font;
+			font-size: 20px;
+			color: #446fc8;
+			bottom: -20px;
+			left: 15px;
+		}
+	}
+
+	&__og {
+		position: relative;
+		span:nth-of-type(1){color:#446fc8}
+		span:nth-of-type(2){position: absolute; left: 90px;}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px;}
+		&::before {
+			content: "OGINO";
+			position: absolute;
+			top: 80px;
+			left: 0;
+			font-family: v.$base_font;
+			font-size: 100px;
+			font-weight: 900;
+			color: #324658;
+			opacity: 0.1;
+		}
+	}
+	&__og--first {
+		position: relative;
+		&::before {
+			content: "おぎーの";
+			position: absolute;
+			font-family: v.$base_font;
+			font-size: 20px;
+			color: #446fc8;
+			bottom: -20px;
+			left: 8px;
+		}
+	}
+	&__heading {
+		align-items: center;
+		&--txt {
+			color: #FFF;
+			font-size: 24px;
+			font-weight: 900;
+			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+			span {
+				font-size: 18px;
+				font-weight: 500;
+				margin-left: 8px;
+			}
+		}
+		&--number {
+			display: inline;
+		}
+	}
+	&__content {
+		background-color: rgba(139, 153, 171, 0.1);
+		background-image: linear-gradient(-90deg, #fff 50%, transparent 50%),linear-gradient(#fff 50%, transparent 50%);
+		background-size: 20px 20px;
+	}
+	&__box {
+		background-color: rgba(255, 255, 255, 0.85);
+		padding: 16px 24px;
+
+	}
+}
