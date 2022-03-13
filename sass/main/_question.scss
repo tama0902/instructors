@@ -7,12 +7,11 @@
 
 .question {
 	font-family: v.$base_font;
-	background-color: #44bed5;
-	padding:0 16px;
-	position: fixed;
-	background-image: url('../../assets/img/dotBox_question.png');
+	background-color: #44bed5 !important;
+	position: relative;
+	background: url('../../assets/img/dotBox_question.png');
 	@include m.pc{
-	background-image: url('../../assets/img/dotBox_question_pc.png');
+	background: url('../../assets/img/dotBox_question_pc.png');
   }
 	&__titleWrap{
 		@include m.h2-titleWrap;
@@ -36,8 +35,11 @@
 		//.layout5 {
 			//padding: 80px 16px;
 		//}
+		.layout2 {
+			padding: 56px 0 0;
+		}
 		.layout3 {
-			padding: 0 24px;
+			padding: 88px 24px;
 		}
 }
 .questionLists {
@@ -223,16 +225,19 @@
 }
 
 #bg-video {
-	//position: fixed;
-	z-index: -100;
-	right: 0;
-	bottom: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 	min-width: 100%;
 	min-height: 100%;
-	width: auto;
+	width: 100%;
 	height: auto;
+	background-size: cover;
+	z-index: 1;
 }
 .video-area {
+	width: 100%;
 	position: relative;
+	overflow: hidden;
 	z-index: 2;
 }

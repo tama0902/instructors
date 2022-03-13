@@ -276,34 +276,29 @@
 .point {
   font-family: "Noto Sans JP", sans-serif;
   color: #001429;
-  padding: 0 16px;
+}
+@media screen and (min-width: 1024px) {
+  .point {
+    /*  1024pxより大きい時 */
+    background: url("../../assets/img/cyberParts_r.png"), url("../../assets/img/cyberParts_l.png");
+    background-position: right top 150px, left -100px bottom 100px;
+    background-repeat: no-repeat, no-repeat;
+  }
+}
+.point .layout2 {
+  padding: 88px 24px 0;
 }
 .point .layout3 {
-  background-image: url("../../assets/img/cyberBox.png");
+  padding: 88px 24px 0;
+  background: url("../../assets/img/cyberBox.png") no-repeat;
   background-position: center;
 }
 @media screen and (min-width: 1024px) {
   .point .layout3 {
     /*  1024pxより大きい時 */
-    background-image: url("../../assets/img/cyberBox_pc.png");
+    background-image: none;
+    padding: 88px 152px;
   }
-}
-.point__tag {
-  font-size: 50px;
-  font-weight: 600;
-  color: #1754c6;
-  opacity: 0.06;
-}
-.point__title {
-  font-size: 28px;
-  color: #001429;
-}
-.point__title--large {
-  font-size: 60px;
-  color: #1754C6;
-}
-.point__title--b {
-  color: #1754C6;
 }
 .point__content {
   line-height: 28px;
@@ -314,7 +309,6 @@
 .point__content--txt {
   text-align: left;
   display: inline-block;
-  padding: 80px 24px 24px;
 }
 @media screen and (min-width: 1024px) {
   .point__content--txt {
@@ -356,7 +350,6 @@
   line-height: 26px;
   display: flex;
   counter-increment: number;
-  margin-left: 24px;
 }
 .point__list--title::before {
   content: "";
@@ -391,20 +384,25 @@
   color: #141d83;
   font-size: 15px;
   line-height: 23px;
-  padding: 40px 24px 80px;
+  padding: 40px 0 80px;
+}
+@media screen and (min-width: 1024px) {
+  .point__list--txt {
+    /*  1024pxより大きい時 */
+    padding: 40px 60px 80px 0;
+  }
 }
 
 .question {
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #44bed5;
-  padding: 0 16px;
-  position: fixed;
-  background-image: url("../../assets/img/dotBox_question.png");
+  background-color: #44bed5 !important;
+  position: relative;
+  background: url("../../assets/img/dotBox_question.png");
 }
 @media screen and (min-width: 1024px) {
   .question {
     /*  1024pxより大きい時 */
-    background-image: url("../../assets/img/dotBox_question_pc.png");
+    background: url("../../assets/img/dotBox_question_pc.png");
   }
 }
 .question__titleWrap {
@@ -442,8 +440,11 @@
   width: 115px;
   transform: translateY(-16px);
 }
+.question .layout2 {
+  padding: 56px 0 0;
+}
 .question .layout3 {
-  padding: 0 24px;
+  padding: 88px 24px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -640,17 +641,21 @@
 }
 
 #bg-video {
-  z-index: -100;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
+  background-size: cover;
+  z-index: 1;
 }
 
 .video-area {
+  width: 100%;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 }
 
