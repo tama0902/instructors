@@ -11,62 +11,96 @@
 	&__lead {
 		font-weight: 700;
 		 span {
-			background-color: #c6f21f;
+			background-color: #FFF;
 			padding: 8px 16px;
 			display: inline-block;
 			margin-bottom: 8px;
 		 }
 	}
+	&__card {
+		padding: 16px;
+	}
+	ul li h3:nth-of-type(-n+3) {
+		display: flex;
+		justify-content: right;
+	}
+	ul li h3:nth-of-type(n+4) {
+		display: flex;
+		justify-content: left;
+	}
 	&__list {
-		counter-reset: l-number;
-		counter-reset: r-number 3;
-		&--l {
-			position: relative;
-			counter-increment: l-number;
-			&::before {
-				content: "";
-				position: absolute;
-				display: block;
-				top: 0;
-				left: 0;
-				content: counter(l-number);
-				font-family: futura-pt-bold,sans-serif;
-				color: #FFF;
-				font-size: 130px;
-				font-weight: 900;
-				opacity: 0.24;
-			}
-		}
-		&--r {
-			position: relative;
-			counter-increment: r-number;
-			&::before {
-				content: "";
-				position: absolute;
-				display: block;
-				top: 0;
-				right: 0;
-				content: counter(r-number);
-				font-family: futura-pt-bold,sans-serif;
-				color: #FFF;
-				font-size: 130px;
-				font-weight: 900;
-				opacity: 0.24;
-			}
-		}
 		&--title {
 			font-weight: 600;
 			color: #FFF;
 			font-size: 24px;
 			line-height: 32px;
-			display: flex;
-			justify-content: center;
+		}
+		&--1 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact1.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+			}
+		}
+		&--2 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact2.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+			}
+		}
+		&--3 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact3.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+			}
+		}
+		&--4 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact4.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+			}
+		}
+		&--5 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact5.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+			}
+		}
+		&--6 {
+			position: relative;
+			&::before {
+				content:url(../../assets/svg/contact6.svg);
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+			}
 		}
 		&--text {
 			color: #FFF;
+			line-height: 24px;
 			font-weight: 500;
 			position: relative;
-			padding: 1em;
+			padding: 24px;
 			&::before {
 				content: "";
 				width: 56px;

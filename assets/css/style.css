@@ -397,6 +397,7 @@
   font-family: "Noto Sans JP", sans-serif;
   background-color: #44bed5 !important;
   position: relative;
+  overflow: hidden;
   background: url("../../assets/img/dotBox_question.png");
 }
 @media screen and (min-width: 1024px) {
@@ -644,10 +645,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateX(-870px);
   min-width: 100%;
   min-height: 100%;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 960px;
   background-size: cover;
   z-index: 1;
 }
@@ -655,7 +657,17 @@
 .video-area {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets/img/dotBox_question.png");
+  background-color: rgba(68, 190, 213, 0.3);
   z-index: 2;
 }
 
@@ -726,62 +738,94 @@
   font-weight: 700;
 }
 .contact__lead span {
-  background-color: #c6f21f;
+  background-color: #FFF;
   padding: 8px 16px;
   display: inline-block;
   margin-bottom: 8px;
 }
-.contact__list {
-  counter-reset: l-number;
-  counter-reset: r-number 3;
+.contact__card {
+  padding: 16px;
 }
-.contact__list--l {
-  position: relative;
-  counter-increment: l-number;
+.contact ul li h3:nth-of-type(-n+3) {
+  display: flex;
+  justify-content: right;
 }
-.contact__list--l::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  content: counter(l-number);
-  font-family: futura-pt-bold, sans-serif;
-  color: #FFF;
-  font-size: 130px;
-  font-weight: 900;
-  opacity: 0.24;
-}
-.contact__list--r {
-  position: relative;
-  counter-increment: r-number;
-}
-.contact__list--r::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 0;
-  content: counter(r-number);
-  font-family: futura-pt-bold, sans-serif;
-  color: #FFF;
-  font-size: 130px;
-  font-weight: 900;
-  opacity: 0.24;
+.contact ul li h3:nth-of-type(n+4) {
+  display: flex;
+  justify-content: left;
 }
 .contact__list--title {
   font-weight: 600;
   color: #FFF;
   font-size: 24px;
   line-height: 32px;
-  display: flex;
-  justify-content: center;
+}
+.contact__list--1 {
+  position: relative;
+}
+.contact__list--1::before {
+  content: url(../../assets/svg/contact1.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.contact__list--2 {
+  position: relative;
+}
+.contact__list--2::before {
+  content: url(../../assets/svg/contact2.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.contact__list--3 {
+  position: relative;
+}
+.contact__list--3::before {
+  content: url(../../assets/svg/contact3.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.contact__list--4 {
+  position: relative;
+}
+.contact__list--4::before {
+  content: url(../../assets/svg/contact4.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+}
+.contact__list--5 {
+  position: relative;
+}
+.contact__list--5::before {
+  content: url(../../assets/svg/contact5.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+}
+.contact__list--6 {
+  position: relative;
+}
+.contact__list--6::before {
+  content: url(../../assets/svg/contact6.svg);
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
 }
 .contact__list--text {
   color: #FFF;
+  line-height: 24px;
   font-weight: 500;
   position: relative;
-  padding: 1em;
+  padding: 24px;
 }
 .contact__list--text::before {
   content: "";
