@@ -6,6 +6,13 @@
 
 .intro {
 	font-family: v.$base_font;
+	.layout1,
+	.layout2,
+	.layout3,
+	.layout4,
+	.layout5 {
+		padding: 80px 16px;
+	}
 	&__teacher {
 		background-color: #f0f0f0;
 		position: relative;
@@ -92,19 +99,36 @@
 	}
 	&__heading {
 		align-items: center;
-		&--txt {
+		@include m.pc{
+			display: flex;
+		}
+		&--flex {
+			@include m.pc{
+				display: flex;
+			}
+		}
+		&--title {
 			color: #FFF;
 			font-size: 24px;
+			line-height: 24px;
 			font-weight: 900;
 			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+			text-align: end;
 			span {
 				font-size: 18px;
 				font-weight: 500;
 				margin-left: 8px;
 			}
 		}
+		&--txt {
+			background-color: #FFF;
+			color: #324658;
+			padding: 16px 24px;
+		}
 		&--number {
 			display: inline;
+			margin-bottom: -14px;
+			margin-right: -8px;
 		}
 	}
 	&__content {

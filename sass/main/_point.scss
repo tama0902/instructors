@@ -21,6 +21,9 @@
 	//}
 	.layout2 {
 		padding: 88px 24px 0;
+		@include m.pc {
+		padding: 88px 18.73%;
+		}
 	}
 	.layout3 {
 		padding: 88px 24px 0;
@@ -28,7 +31,7 @@
 		background-position: center;
 		@include m.pc {
 		background-image: none;
-		padding: 88px 152px;
+		padding: 88px 18.73%;
 		}
 	}
 	&__content {
@@ -40,7 +43,7 @@
 			text-align: left;
 			display: inline-block;
 			@include m.pc {
-				padding: 80px 264px 24px;
+				padding: 80px 128px 24px;
 			}
 		}
 	}

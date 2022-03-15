@@ -16,23 +16,40 @@
 	//.layout5 {
 	//	padding: 80px 16px;
 	//}
+	.layout1 {
+		padding-top: 56px;
+		@include m.pc {
+			padding: 56px 18.75% 0 18.75%;
+		}
+	}
 	.layout2 {
+		padding-top: 88px;
 		@include m.pc {
 			display: flex;
-			padding-left: 360px;
+			padding-left: 18.75%;
 		}
 	}
 	.layout3 {
-		margin-top: -32px;
+		margin-top: -22px;
+		position: relative;
+		z-index: 2;
+		@include m.pc {
+			position: absolute;
+			top: 450px;
+			left: 840px;
+		}
 	}
 	.layout4 {
-		margin-top: 108px;
-		padding: 0 32px 80px;
+		padding: 108px 32px 80px;
+		@include m.pc {
+			padding: 300px 18.75% 0 18.75%;
+		}
 	}
 	&__img {
+		position: relative;
 		@include m.pc {
 			display: flex;
-			position: relative;
+			flex-wrap: wrap;
 	}
 		&--og, &--ash {
 			padding-bottom: 8px;
@@ -40,12 +57,21 @@
 			width: 50%;
 			}
 		}
+		&--og {
+			img {
+				@include m.pc {
+				width: 440px;
+				}
+			}
+		}
 		&--ash {
-			@include m.pc {
+			img {
+				@include m.pc {
 				position: absolute;
-				top: 220px;
-				left: 480px;
+				top: 400px;
+				left: 320px;
 				width: 640px;
+				}
 			}
 		}
 		&--tw {
@@ -56,9 +82,6 @@
 			}
 			img {
 				@include m.pc {
-				position: absolute;
-				top: 60px;
-				right: 0;
 				width: 776px;
 				}
 			}
@@ -66,11 +89,17 @@
 	}
 	&__lead {
 		font-weight: 700;
+		@include m.pc {
+		font-size: 32px;
+		}
 		 span {
 			background-color: #FFF;
 			padding: 8px 24px;
 			display: inline-block;
 			margin-bottom: 8px;
+			@include m.pc {
+			padding: 20px 32px 20px 24px;
+			}
 		 }
 	}
 	&__flex {
@@ -135,7 +164,7 @@
 	&__list2 {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		&--title {
 			font-weight: 600;
 			color: #FFF;

@@ -36,6 +36,11 @@
 		//.layout5 {
 			//padding: 80px 16px;
 		//}
+		.layout1 {
+			@include m.pc {
+				padding: 56px 360px 0 360px;
+			}
+		}
 		.layout2 {
 			padding: 56px 0 0;
 		}

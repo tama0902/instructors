@@ -143,6 +143,13 @@
 .intro {
   font-family: "Noto Sans JP", sans-serif;
 }
+.intro .layout1,
+.intro .layout2,
+.intro .layout3,
+.intro .layout4,
+.intro .layout5 {
+  padding: 80px 16px;
+}
 .intro__teacher {
   background-color: #f0f0f0;
   position: relative;
@@ -249,19 +256,40 @@
 .intro__heading {
   align-items: center;
 }
-.intro__heading--txt {
+@media screen and (min-width: 1024px) {
+  .intro__heading {
+    /*  1024pxより大きい時 */
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--flex {
+    /*  1024pxより大きい時 */
+    display: flex;
+  }
+}
+.intro__heading--title {
   color: #FFF;
   font-size: 24px;
+  line-height: 24px;
   font-weight: 900;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  text-align: end;
 }
-.intro__heading--txt span {
+.intro__heading--title span {
   font-size: 18px;
   font-weight: 500;
   margin-left: 8px;
 }
+.intro__heading--txt {
+  background-color: #FFF;
+  color: #324658;
+  padding: 16px 24px;
+}
 .intro__heading--number {
   display: inline;
+  margin-bottom: -14px;
+  margin-right: -8px;
 }
 .intro__content {
   background-color: rgba(139, 153, 171, 0.1);
@@ -288,6 +316,12 @@
 .point .layout2 {
   padding: 88px 24px 0;
 }
+@media screen and (min-width: 1024px) {
+  .point .layout2 {
+    /*  1024pxより大きい時 */
+    padding: 88px 18.73%;
+  }
+}
 .point .layout3 {
   padding: 88px 24px 0;
   background: url("../../assets/img/cyberBox.png") no-repeat;
@@ -297,7 +331,7 @@
   .point .layout3 {
     /*  1024pxより大きい時 */
     background-image: none;
-    padding: 88px 152px;
+    padding: 88px 18.73%;
   }
 }
 .point__content {
@@ -313,7 +347,7 @@
 @media screen and (min-width: 1024px) {
   .point__content--txt {
     /*  1024pxより大きい時 */
-    padding: 80px 264px 24px;
+    padding: 80px 128px 24px;
   }
 }
 .point__list {
@@ -440,6 +474,12 @@
   display: block;
   width: 115px;
   transform: translateY(-16px);
+}
+@media screen and (min-width: 1024px) {
+  .question .layout1 {
+    /*  1024pxより大きい時 */
+    padding: 56px 360px 0 360px;
+  }
 }
 .question .layout2 {
   padding: 56px 0 0;
@@ -735,25 +775,55 @@
   background-color: #324658;
   position: relative;
 }
+.contact .layout1 {
+  padding-top: 56px;
+}
+@media screen and (min-width: 1024px) {
+  .contact .layout1 {
+    /*  1024pxより大きい時 */
+    padding: 56px 18.75% 0 18.75%;
+  }
+}
+.contact .layout2 {
+  padding-top: 88px;
+}
 @media screen and (min-width: 1024px) {
   .contact .layout2 {
     /*  1024pxより大きい時 */
     display: flex;
-    padding-left: 360px;
+    padding-left: 18.75%;
   }
 }
 .contact .layout3 {
-  margin-top: -32px;
+  margin-top: -22px;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 1024px) {
+  .contact .layout3 {
+    /*  1024pxより大きい時 */
+    position: absolute;
+    top: 450px;
+    left: 840px;
+  }
 }
 .contact .layout4 {
-  margin-top: 108px;
-  padding: 0 32px 80px;
+  padding: 108px 32px 80px;
+}
+@media screen and (min-width: 1024px) {
+  .contact .layout4 {
+    /*  1024pxより大きい時 */
+    padding: 300px 18.75% 0 18.75%;
+  }
+}
+.contact__img {
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .contact__img {
     /*  1024pxより大きい時 */
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
   }
 }
 .contact__img--og, .contact__img--ash {
@@ -766,11 +836,17 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .contact__img--ash {
+  .contact__img--og img {
+    /*  1024pxより大きい時 */
+    width: 440px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact__img--ash img {
     /*  1024pxより大きい時 */
     position: absolute;
-    top: 220px;
-    left: 480px;
+    top: 400px;
+    left: 320px;
     width: 640px;
   }
 }
@@ -787,20 +863,29 @@
 @media screen and (min-width: 1024px) {
   .contact__img--tw img {
     /*  1024pxより大きい時 */
-    position: absolute;
-    top: 60px;
-    right: 0;
     width: 776px;
   }
 }
 .contact__lead {
   font-weight: 700;
 }
+@media screen and (min-width: 1024px) {
+  .contact__lead {
+    /*  1024pxより大きい時 */
+    font-size: 32px;
+  }
+}
 .contact__lead span {
   background-color: #FFF;
   padding: 8px 24px;
   display: inline-block;
   margin-bottom: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .contact__lead span {
+    /*  1024pxより大きい時 */
+    padding: 20px 32px 20px 24px;
+  }
 }
 .contact__flex {
   display: flex;
@@ -864,7 +949,7 @@
 .contact__list2 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .contact__list2--title {
   font-weight: 600;
