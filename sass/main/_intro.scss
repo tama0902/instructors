@@ -45,6 +45,7 @@
 	}
 	&__ash {
 		position: relative;
+		overflow: hidden;
 		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(2){position: absolute; left: 90px;}
 		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px;}
@@ -108,8 +109,9 @@
 		}
 		&--ash {
 			background: url(../../assets/img/intro1_ash.png) no-repeat !important;
+			background-size: 70% !important;
 			@include m.pc{
-			background-size: 552px auto !important;
+			background-size: 46% auto !important;
 			}
 		}
 		&--flex {
@@ -122,7 +124,7 @@
 		&--title {
 			color: #FFF;
 			font-size: 24px;
-			line-height: 24px;
+			line-height: 42px;
 			font-weight: 900;
 			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 			text-align: end;
@@ -144,6 +146,8 @@
 			color: #324658;
 			padding: 16px 24px;
 			min-height: 195px;
+			width: 81.6%;
+			margin-left: auto;
 			@include m.pc{
 				background-color: transparent;
 				color: #FFF;
@@ -163,11 +167,14 @@
 			text-align: end;
 			@include m.pc{
 			order: 0;
-			padding-right: 24px;
+			padding-right: 32px;
 			}
 			img {
+				display: block;
+				width: 76%;
+				margin-left: auto;
 				@include m.pc{
-				width: 576px;
+				width: 52%;
 				}
 			}
 		} 

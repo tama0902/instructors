@@ -185,6 +185,7 @@
 }
 .intro__ash {
   position: relative;
+  overflow: hidden;
 }
 .intro__ash span:nth-of-type(1) {
   color: #446fc8;
@@ -271,11 +272,12 @@
 }
 .intro__heading--ash {
   background: url(../../assets/img/intro1_ash.png) no-repeat !important;
+  background-size: 70% !important;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--ash {
     /*  1024pxより大きい時 */
-    background-size: 552px auto !important;
+    background-size: 46% auto !important;
   }
 }
 .intro__heading--flex {
@@ -291,7 +293,7 @@
 .intro__heading--title {
   color: #FFF;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 42px;
   font-weight: 900;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   text-align: end;
@@ -316,6 +318,8 @@
   color: #324658;
   padding: 16px 24px;
   min-height: 195px;
+  width: 81.6%;
+  margin-left: auto;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--txt {
@@ -341,13 +345,18 @@
   .intro__heading--img2 {
     /*  1024pxより大きい時 */
     order: 0;
-    padding-right: 24px;
+    padding-right: 32px;
   }
+}
+.intro__heading--img2 img {
+  display: block;
+  width: 76%;
+  margin-left: auto;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--img2 img {
     /*  1024pxより大きい時 */
-    width: 576px;
+    width: 52%;
   }
 }
 .intro__content {
@@ -849,7 +858,6 @@
 @media screen and (min-width: 1024px) {
   .contact .layout2 {
     /*  1024pxより大きい時 */
-    display: flex;
     padding-left: 18.75%;
   }
 }
@@ -861,9 +869,6 @@
 @media screen and (min-width: 1024px) {
   .contact .layout3 {
     /*  1024pxより大きい時 */
-    position: absolute;
-    top: 450px;
-    left: 840px;
   }
 }
 .contact .layout4 {
@@ -884,6 +889,11 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .contact__img--l, .contact__img--r {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+  }
 }
 .contact__img--og, .contact__img--ash {
   padding-bottom: 8px;
@@ -894,19 +904,27 @@
     width: 50%;
   }
 }
+.contact__img--og img {
+  display: block;
+  width: 78%;
+}
 @media screen and (min-width: 1024px) {
   .contact__img--og img {
     /*  1024pxより大きい時 */
-    width: 440px;
+    display: block;
+    width: 145%;
+    padding-bottom: 30px;
   }
+}
+.contact__img--ash img {
+  display: block;
+  width: 78%;
 }
 @media screen and (min-width: 1024px) {
   .contact__img--ash img {
     /*  1024pxより大きい時 */
-    position: absolute;
-    top: 400px;
-    left: 460px;
-    width: 640px;
+    width: 200%;
+    padding-left: 72px;
   }
 }
 .contact__img--tw {
@@ -917,22 +935,32 @@
   .contact__img--tw {
     /*  1024pxより大きい時 */
     width: 50%;
-    padding-top: 64px;
+    padding-top: 10%;
   }
+}
+.contact__img--tw img {
+  display: block;
+  width: 78%;
+  margin-left: auto;
 }
 @media screen and (min-width: 1024px) {
   .contact__img--tw img {
     /*  1024pxより大きい時 */
-    width: 776px;
+    width: 200%;
+    padding-left: 36px;
   }
 }
 .contact__lead {
   font-weight: 700;
+  margin-top: -20px;
 }
 @media screen and (min-width: 1024px) {
   .contact__lead {
     /*  1024pxより大きい時 */
+    position: absolute;
     font-size: 32px;
+    top: 34%;
+    left: 40%;
   }
 }
 .contact__lead span {
@@ -944,7 +972,7 @@
 @media screen and (min-width: 1024px) {
   .contact__lead span {
     /*  1024pxより大きい時 */
-    padding: 20px 32px 20px 24px;
+    padding: 20px 64px 20px 24px;
   }
 }
 .contact__flex {
