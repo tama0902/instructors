@@ -143,12 +143,20 @@
 .intro {
   font-family: "Noto Sans JP", sans-serif;
 }
-.intro .layout1,
+@media screen and (min-width: 1024px) {
+  .intro {
+    /*  1024pxより大きい時 */
+  }
+  .intro .layout1,
 .intro .layout2,
 .intro .layout3,
 .intro .layout4,
 .intro .layout5 {
-  padding: 80px 16px;
+    padding: 80px 18.75%;
+  }
+}
+.intro .layout4 {
+  padding: 160px 0 0 48px;
 }
 .intro__teacher {
   background-color: #f0f0f0;
@@ -259,13 +267,25 @@
 @media screen and (min-width: 1024px) {
   .intro__heading {
     /*  1024pxより大きい時 */
-    display: flex;
   }
+}
+.intro__heading--ash {
+  background: url(../../assets/img/intro1_ash.png) no-repeat !important;
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--ash {
+    /*  1024pxより大きい時 */
+    background-size: 552px auto !important;
+  }
+}
+.intro__heading--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--flex {
     /*  1024pxより大きい時 */
-    display: flex;
   }
 }
 .intro__heading--title {
@@ -275,21 +295,60 @@
   font-weight: 900;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   text-align: end;
+  padding-right: 32px;
 }
 .intro__heading--title span {
   font-size: 18px;
   font-weight: 500;
   margin-left: 8px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__heading--title {
+    /*  1024pxより大きい時 */
+    order: 1;
+    margin-top: -200px;
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
 .intro__heading--txt {
   background-color: #FFF;
   color: #324658;
   padding: 16px 24px;
+  min-height: 195px;
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--txt {
+    /*  1024pxより大きい時 */
+    background-color: transparent;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 40px;
+    order: 2;
+    max-width: 600px;
+    margin-left: auto;
+    padding: 24px 80px 24px 0;
+  }
 }
 .intro__heading--number {
   display: inline;
-  margin-bottom: -14px;
-  margin-right: -8px;
+  margin-right: 5px;
+}
+.intro__heading--img2 {
+  text-align: end;
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--img2 {
+    /*  1024pxより大きい時 */
+    order: 0;
+    padding-right: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--img2 img {
+    /*  1024pxより大きい時 */
+    width: 576px;
+  }
 }
 .intro__content {
   background-color: rgba(139, 153, 171, 0.1);
@@ -846,7 +905,7 @@
     /*  1024pxより大きい時 */
     position: absolute;
     top: 400px;
-    left: 320px;
+    left: 460px;
     width: 640px;
   }
 }
@@ -858,6 +917,7 @@
   .contact__img--tw {
     /*  1024pxより大きい時 */
     width: 50%;
+    padding-top: 64px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -919,6 +979,12 @@
   padding: 24px 24px 48px;
   margin-top: -30px;
 }
+@media screen and (min-width: 1024px) {
+  .contact__list1--text {
+    /*  1024pxより大きい時 */
+    min-height: 192px;
+  }
+}
 .contact__list1--text::before {
   content: "";
   display: inline-block;
@@ -966,6 +1032,12 @@
   position: relative;
   padding: 24px 24px 48px;
   margin-top: -30px;
+}
+@media screen and (min-width: 1024px) {
+  .contact__list2--text {
+    /*  1024pxより大きい時 */
+    min-height: 240px;
+  }
 }
 .contact__list2--text::before {
   content: "";

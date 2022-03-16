@@ -6,12 +6,17 @@
 
 .intro {
 	font-family: v.$base_font;
-	.layout1,
-	.layout2,
-	.layout3,
-	.layout4,
-	.layout5 {
-		padding: 80px 16px;
+	@include m.pc{
+		.layout1,
+		.layout2,
+		.layout3,
+		.layout4,
+		.layout5 {
+			padding: 80px 18.75%;
+		}
+	}
+	.layout4 {
+		padding: 160px 0 0 48px;
 	}
 	&__teacher {
 		background-color: #f0f0f0;
@@ -100,11 +105,18 @@
 	&__heading {
 		align-items: center;
 		@include m.pc{
-			display: flex;
+		}
+		&--ash {
+			background: url(../../assets/img/intro1_ash.png) no-repeat !important;
+			@include m.pc{
+			background-size: 552px auto !important;
+			}
 		}
 		&--flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
 			@include m.pc{
-				display: flex;
 			}
 		}
 		&--title {
@@ -114,22 +126,51 @@
 			font-weight: 900;
 			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 			text-align: end;
+			padding-right: 32px;
 			span {
 				font-size: 18px;
 				font-weight: 500;
 				margin-left: 8px;
+			}
+			@include m.pc{
+			order: 1;
+			margin-top: -200px;
+			font-size: 50px;
+			line-height: 70px;
 			}
 		}
 		&--txt {
 			background-color: #FFF;
 			color: #324658;
 			padding: 16px 24px;
+			min-height: 195px;
+			@include m.pc{
+				background-color: transparent;
+				color: #FFF;
+				font-size: 20px;
+				line-height: 40px;
+				order: 2;
+				max-width: 600px;
+				margin-left: auto;
+				padding: 24px 80px 24px 0;
+			}
 		}
 		&--number {
 			display: inline;
-			margin-bottom: -14px;
-			margin-right: -8px;
+			margin-right: 5px;
 		}
+		&--img2 {
+			text-align: end;
+			@include m.pc{
+			order: 0;
+			padding-right: 24px;
+			}
+			img {
+				@include m.pc{
+				width: 576px;
+				}
+			}
+		} 
 	}
 	&__content {
 		background-color: rgba(139, 153, 171, 0.1);
