@@ -9,16 +9,40 @@
 	@include m.pc{
 		.layout1,
 		.layout2,
-		.layout3,
 		.layout4,
 		.layout5 {
 			padding: 80px 18.75%;
 		}
 	}
+	.layout1 {
+		padding: 64px 0 96px;
+		@include m.pc{
+			padding: 120px 0 180px;
+		}
+	}
+	.layout2 {
+		@include m.pc{
+			padding-top: 28px;
+		}
+	}
+	.layout3 {
+		padding-bottom: 50px;
+		@include m.pc{
+			padding-bottom: 0;
+		}
+	}
 	.layout4 {
 		padding: 42% 0 0 48px;
-	@include m.pc{
+		margin-top: 35px;
+		@include m.pc{
 			padding: 20% 0 0 18.75%;
+			margin: 0;
+		}
+	}
+	.layout5 {
+		@include m.pc{
+			padding-top: 320px;
+			padding-bottom: 280px;
 		}
 	}
 	&__teacher {
@@ -28,13 +52,18 @@
 		&::before {
 			content: "";
 			position: absolute;
-			top: 100px;
-			bottom: 0;
+			top: 153px;
+			bottom: 143px;
 			left: 0;
 			right: 0;
-			transform: skewY(-7deg);
+			transform: skewY(-23deg);
 			z-index: -1;
 			background-color: #324658;
+			@include m.pc {
+			transform: skewY(-15deg);
+			bottom: -60px;
+			top: 282px;
+			}
 		}
 	}
 	&__name {
@@ -45,17 +74,23 @@
 		height: 90px;
 		position: absolute;
 		top: -50px;
+		@include m.pc{
+			font-size: 130px;
+			height: 173px;
+		}
 	}
 	&__ash {
 		position: relative;
 		overflow: hidden;
+		padding-top: 35px;
 		span:nth-of-type(1){color:#446fc8}
-		span:nth-of-type(2){position: absolute; left: 90px;}
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px;}
+		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
+
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
 		&::before {
 			content: "ASHIZAWA";
 			position: absolute;
-			top: 80px;
+			top: 136px;
 			left: 0;
 			font-family: v.$base_font;
 			font-size: 100px;
@@ -72,20 +107,27 @@
 			font-family: v.$base_font;
 			font-size: 20px;
 			color: #446fc8;
-			bottom: -20px;
+			bottom: -44px;
 			left: 15px;
+			@include m.pc {
+				font-size: 27px;
+				bottom: -55px;
+			}
 		}
 	}
 
 	&__og {
 		position: relative;
+		overflow: hidden;
+		padding-top: 35px;
 		span:nth-of-type(1){color:#446fc8}
-		span:nth-of-type(2){position: absolute; left: 90px;}
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px;}
+		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
+
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
 		&::before {
 			content: "OGINO";
 			position: absolute;
-			top: 80px;
+			top: 136px;
 			left: 0;
 			font-family: v.$base_font;
 			font-size: 100px;
@@ -102,8 +144,12 @@
 			font-family: v.$base_font;
 			font-size: 20px;
 			color: #446fc8;
-			bottom: -20px;
-			left: 8px;
+			bottom: -44px;
+			left: 15px;
+			@include m.pc {
+				font-size: 27px;
+				bottom: -55px;
+			}
 		}
 	}
 	&__heading {
@@ -111,10 +157,17 @@
 		@include m.pc{
 		}
 		&--ash {
-			background: url(../../assets/img/intro1_ash.png) no-repeat !important;
-			background-size: 70% !important;
+			background: url(../../assets/img/intro1_ash.png) no-repeat;
+			background-size: 70%;
 			@include m.pc{
-			background-size: 46% auto !important;
+			background-size: 46% auto;
+			}
+		}
+		&--og {
+			background: url(../../assets/img/intro1_og.png) no-repeat;
+			background-size: 70%;
+			@include m.pc{
+			background-size: 46% auto;
 			}
 		}
 		&--flex {
@@ -145,10 +198,11 @@
 			}
 		}
 		&--txt {
+			font-size: 15px;
+			line-height: 24px;
 			background-color: #FFF;
 			color: #324658;
-			padding: 16px 24px;
-			min-height: 195px;
+			padding: 16px 24px 64px;
 			width: 95.6%;
 			margin-left: auto;
 			@include m.pc{
@@ -179,12 +233,33 @@
 				width: 88%;
 				margin-left: auto;
 				@include m.pc{
-				width: 60%;
+				width: 61%;
 				}
 			}
 		} 
 	}
 	&__content {
+		background-color: #f0f0f0;
+		position: relative;
+		z-index: -1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 224px;
+			bottom: -384px;
+			left: 0;
+			right: 0;
+			transform: skewY(-23deg);
+			z-index: -1;
+			background:-moz-linear-gradient(right, #243C74, #2EB6C5);
+			background:-webkit-linear-gradient(right, #243C74, #2EB6C5);
+			background:linear-gradient(to right, #243C74, #2EB6C5);
+			@include m.pc {
+			transform: skewY(-15deg);
+			bottom: -60px;
+			top: 282px;
+			}
+		}
 		@include m.pc{
 		display: flex;
 		margin-left: -200px;

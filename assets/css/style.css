@@ -149,19 +149,51 @@
   }
   .intro .layout1,
 .intro .layout2,
-.intro .layout3,
 .intro .layout4,
 .intro .layout5 {
     padding: 80px 18.75%;
   }
 }
+.intro .layout1 {
+  padding: 64px 0 96px;
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout1 {
+    /*  1024pxより大きい時 */
+    padding: 120px 0 180px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout2 {
+    /*  1024pxより大きい時 */
+    padding-top: 28px;
+  }
+}
+.intro .layout3 {
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout3 {
+    /*  1024pxより大きい時 */
+    padding-bottom: 0;
+  }
+}
 .intro .layout4 {
   padding: 42% 0 0 48px;
+  margin-top: 35px;
 }
 @media screen and (min-width: 1024px) {
   .intro .layout4 {
     /*  1024pxより大きい時 */
     padding: 20% 0 0 18.75%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout5 {
+    /*  1024pxより大きい時 */
+    padding-top: 320px;
+    padding-bottom: 280px;
   }
 }
 .intro__teacher {
@@ -172,13 +204,21 @@
 .intro__teacher::before {
   content: "";
   position: absolute;
-  top: 100px;
-  bottom: 0;
+  top: 153px;
+  bottom: 143px;
   left: 0;
   right: 0;
-  transform: skewY(-7deg);
+  transform: skewY(-23deg);
   z-index: -1;
   background-color: #324658;
+}
+@media screen and (min-width: 1024px) {
+  .intro__teacher::before {
+    /*  1024pxより大きい時 */
+    transform: skewY(-15deg);
+    bottom: -60px;
+    top: 282px;
+  }
 }
 .intro__name {
   font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
@@ -189,9 +229,17 @@
   position: absolute;
   top: -50px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__name {
+    /*  1024pxより大きい時 */
+    font-size: 130px;
+    height: 173px;
+  }
+}
 .intro__ash {
   position: relative;
   overflow: hidden;
+  padding-top: 35px;
 }
 .intro__ash span:nth-of-type(1) {
   color: #446fc8;
@@ -200,16 +248,29 @@
   position: absolute;
   left: 90px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__ash span:nth-of-type(2) {
+    /*  1024pxより大きい時 */
+    left: 127px;
+  }
+}
 .intro__ash span:nth-of-type(3) {
   font-size: 48px;
   position: absolute;
   top: 15px;
   left: 180px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__ash span:nth-of-type(3) {
+    /*  1024pxより大きい時 */
+    font-size: 74px;
+    left: 261px;
+  }
+}
 .intro__ash::before {
   content: "ASHIZAWA";
   position: absolute;
-  top: 80px;
+  top: 136px;
   left: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 100px;
@@ -226,11 +287,20 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 20px;
   color: #446fc8;
-  bottom: -20px;
+  bottom: -44px;
   left: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .intro__ash--first::before {
+    /*  1024pxより大きい時 */
+    font-size: 27px;
+    bottom: -55px;
+  }
 }
 .intro__og {
   position: relative;
+  overflow: hidden;
+  padding-top: 35px;
 }
 .intro__og span:nth-of-type(1) {
   color: #446fc8;
@@ -239,16 +309,29 @@
   position: absolute;
   left: 90px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__og span:nth-of-type(2) {
+    /*  1024pxより大きい時 */
+    left: 127px;
+  }
+}
 .intro__og span:nth-of-type(3) {
   font-size: 48px;
   position: absolute;
   top: 15px;
   left: 180px;
 }
+@media screen and (min-width: 1024px) {
+  .intro__og span:nth-of-type(3) {
+    /*  1024pxより大きい時 */
+    font-size: 74px;
+    left: 261px;
+  }
+}
 .intro__og::before {
   content: "OGINO";
   position: absolute;
-  top: 80px;
+  top: 136px;
   left: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 100px;
@@ -265,8 +348,15 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 20px;
   color: #446fc8;
-  bottom: -20px;
-  left: 8px;
+  bottom: -44px;
+  left: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .intro__og--first::before {
+    /*  1024pxより大きい時 */
+    font-size: 27px;
+    bottom: -55px;
+  }
 }
 .intro__heading {
   align-items: center;
@@ -277,13 +367,23 @@
   }
 }
 .intro__heading--ash {
-  background: url(../../assets/img/intro1_ash.png) no-repeat !important;
-  background-size: 70% !important;
+  background: url(../../assets/img/intro1_ash.png) no-repeat;
+  background-size: 70%;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--ash {
     /*  1024pxより大きい時 */
-    background-size: 46% auto !important;
+    background-size: 46% auto;
+  }
+}
+.intro__heading--og {
+  background: url(../../assets/img/intro1_og.png) no-repeat;
+  background-size: 70%;
+}
+@media screen and (min-width: 1024px) {
+  .intro__heading--og {
+    /*  1024pxより大きい時 */
+    background-size: 46% auto;
   }
 }
 .intro__heading--flex {
@@ -320,10 +420,11 @@
   }
 }
 .intro__heading--txt {
+  font-size: 15px;
+  line-height: 24px;
   background-color: #FFF;
   color: #324658;
-  padding: 16px 24px;
-  min-height: 195px;
+  padding: 16px 24px 64px;
   width: 95.6%;
   margin-left: auto;
 }
@@ -364,7 +465,33 @@
 @media screen and (min-width: 1024px) {
   .intro__heading--img2 img {
     /*  1024pxより大きい時 */
-    width: 60%;
+    width: 61%;
+  }
+}
+.intro__content {
+  background-color: #f0f0f0;
+  position: relative;
+  z-index: -1;
+}
+.intro__content::before {
+  content: "";
+  position: absolute;
+  top: 224px;
+  bottom: -384px;
+  left: 0;
+  right: 0;
+  transform: skewY(-23deg);
+  z-index: -1;
+  background: -moz-linear-gradient(right, #243C74, #2EB6C5);
+  background: -webkit-linear-gradient(right, #243C74, #2EB6C5);
+  background: linear-gradient(to right, #243C74, #2EB6C5);
+}
+@media screen and (min-width: 1024px) {
+  .intro__content::before {
+    /*  1024pxより大きい時 */
+    transform: skewY(-15deg);
+    bottom: -60px;
+    top: 282px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -567,7 +694,7 @@
 @media screen and (min-width: 1024px) {
   .question .layout1 {
     /*  1024pxより大きい時 */
-    padding: 56px 360px 0 360px;
+    padding: 56px 18.75% 0;
   }
 }
 .question .layout2 {
