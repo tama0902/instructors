@@ -61,10 +61,10 @@
 		}
 	}
 	&__item {
-		height: 88px;
 		@include m.pc {
 			width: calc(96% / 3);
 			margin: 16px auto 0;
+			padding:10px;
 		}
 		&:nth-of-type(n+2) {
 			margin-top: 16px;
@@ -72,25 +72,26 @@
 	}
 }
 .questionList {
-	list-style: none;
-	background-color: #FFF;
-	border-radius: 16px;
-	padding: 16px;
-	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		width: 58px;
-		height: 8px;
-		border-bottom: 1px solid #3A61BD;
-		border-right: 1px solid #3A61BD;
-		transform: skew(45deg);
-		bottom: 24px;
-		right: 24px;
-		pointer-events: none;
-	}
 	&__title {
 		color: #446fc8;
+		min-height: 96px;
+		list-style: none;
+		background-color: #FFF;
+		border-radius: 16px;
+		padding: 16px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 58px;
+			height: 8px;
+			border-bottom: 1px solid #3A61BD;
+			border-right: 1px solid #3A61BD;
+			transform: skew(45deg);
+			bottom: 24px;
+			right: 24px;
+			pointer-events: none;
+		}
 	}
 }
 .questionModal {
@@ -234,11 +235,9 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	transform: translateX(-870px);
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
-	height: 960px;
 	background-size: cover;
 	z-index: 1;
 }
@@ -254,6 +253,6 @@
 	top: 0;
 	left: 0;
 	background-image: url('../../assets/img/dotBox_question.png');
-	background-color: rgba(68, 190, 213, .3);
+	background-color: rgba(17, 182, 214, 0.5);
 	z-index: 2;
 }

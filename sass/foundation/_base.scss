@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @use "../foundation/various" as v;
 @use '../foundation/mixin' as m;
 
@@ -5,6 +6,9 @@
 	font-family: v.$base_font;
 	font-size: v.$base_size;
 	line-height: v.$base_l-height;
+	.not-pc-br{
+	  display:none;
+	}
 	.sp {
 		display: block;
 	}

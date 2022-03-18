@@ -1,0 +1,118 @@
+@charset "UTF-8";
+//mixin用
+@use '../foundation/mixin' as m;
+
+.studentsVoice{
+  background-color: rgb(18, 94, 208);
+  &__title{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color:white;
+  }
+  &__text{
+    font-size:16px;
+    line-height: 1.6;
+    color:white;
+    text-align: left;
+  }
+}
+
+
+
+.swiperContentArea{
+  max-width:343px;
+  width:auto;
+  margin: 0 auto;
+  margin-top:34px;
+  @include m.pc{
+    max-width:445px;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studentsVoice__content{
+  box-sizing: border-box;
+  padding:24px 24px 20px;
+  max-width:293px;
+  width:100%;
+  height:303px;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.studentsVoice__content::before{
+  position:absolute;
+  content:"";
+  top:0;
+  left:0;
+  background-image: url("../../assets/img/swiper_bg_left.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:53px;
+  height:303px;
+}
+.studentsVoice__content::after{
+  position:absolute;
+  content:"";
+  top:0;
+  right:0;
+  background-image: url("../../assets/img/swiper_bg_right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:53px;
+  height:303px;
+}
+/* 前ページ、次ページボタン共通のスタイル */
+.swiper-button-prev,
+.swiper-button-next {
+	width: 48px; /* ボタンの幅 */
+	height: 48px; /* ボタンの高さ */
+	background-size: 48px 48px; /* 背景画像としてのサイズ（＝表示したい画像サイズ） */
+	margin-top: -24px; /* 縦中央配置用：ボタンの高さの半分のネガティブマージン（top:50%がすでに設定されている） */
+}
+/* 次ページボタンのスタイル */
+.swiper-button-next {
+	background-image: url("../../assets/img/swiper_next_button.png");
+  margin-right:-10px;
+  @include m.pc{
+    margin-right: 38px;
+  }
+}
+.swiper-button-prev {
+	background-image: url("../../assets/img/swiper_before_button.png");
+  margin-left:-10px;
+  @include m.pc{
+    margin-left: 38px;
+  }
+}
+
+/* デフォルトの矢印打ち消し：次ページ */
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: '';
+}
+/* デフォルトの矢印打ち消し：前ページ */
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: '';
+}
+.studentsVoice__imageWrap{
+  display:flex;
+  justify-content: center;
+}
+
+.studentsVoice__image{
+  display:block;
+  width:50%;
+}

@@ -27,6 +27,7 @@
 	}
 	.layout3 {
 		padding-bottom: 50px;
+		padding-left: 16px;
 		@include m.pc{
 			padding-bottom: 0;
 		}
@@ -44,6 +45,9 @@
 			padding-top: 320px;
 			padding-bottom: 280px;
 		}
+	}
+	.layout8 {
+		padding-left: 16px;
 	}
 	&__teacher {
 		background-color: #f0f0f0 !important;
@@ -218,7 +222,8 @@
 		}
 		&--number {
 			display: inline;
-			margin-right: 5px;
+			margin-right: -16px;
+			margin-bottom: -8px;
 		}
 		&--img2 {
 			text-align: end;

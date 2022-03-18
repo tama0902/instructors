@@ -1,0 +1,214 @@
+@charset "UTF-8";
+//mixin用
+@use '../foundation/mixin' as m;
+
+/* ---------------------------- */
+/* --- カードセクション --- */
+/* ---------------------------- */
+.card{
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  &__item{
+    width: calc((100% - 56px) / 3);
+    background-color: rgb(182, 226, 112);
+    cursor: pointer;
+    margin-bottom: 40px;
+    &:not(:nth-child(3n-2)){
+      margin-left:28px;
+    }
+  }
+}
+/* ---------------------------- */
+/* --- ModalSection --- */
+/* ---------------------------- */
+.ModalLayer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.65s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10000;
+}
+.ModalLayer.isShow{
+  transition: opacity 0.65s;
+  pointer-events: auto;
+  opacity: 1;
+}
+.ModalLayer-Mask{
+  position: absolute;
+  background: rgba(50,70,88,0.5);
+  width: 100%;
+  height: 100vh;
+}
+.ModalLayer-Inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  @include m.pc{
+    max-width: 830px;
+  }
+}
+.Modal{
+  &-Inner{
+    &-Btn{
+      position: absolute;
+      top: 24px;
+      right: -10px;
+      width: 70px;
+      color: #fff;
+      z-index: 10;
+      cursor: pointer;
+      img{
+        display:block;
+        width:16px;
+        height:16px;
+      }
+    }
+    &-Card{
+      width:100%;
+      @include m.pc{
+        overflow: hidden;
+      }
+      &-Wrapper{
+        display: flex;
+        &-Slide{
+          width:100% !important;
+          height:auto;
+          &-Item{
+            padding:18px;
+            border-radius: 16px;
+            width :90%;
+            height: 90vh;
+            background: #ffffff;
+            @include m.pc{
+              padding:36px;
+              width: 100%;
+              height:60vh;
+              height:486px;
+            }
+            &-Box{
+              position: relative;
+              margin-left: auto;
+              margin-right: auto;
+              width: 78.37%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.swiper-button-next--blue{
+  background-image: url(../../assets/img/swiper_before_button--blue.png);
+  left:40px;
+}
+.swiper-button-prev--blue{
+  background-image: url(../../assets/img/swiper_after_button--blue.png);
+  right:40px;
+}
+.swiper-button-prev--blue, .swiper-button-next--blue {
+  width: 36px;
+  height: 36px;
+  background-size: 36px 36px;
+  margin-top: -24px;
+  z-index:1;
+  position:absolute;
+  bottom:16px;
+}
+
+/* ---------------------------- */
+/* --- モーダルのカード --- */
+/* ---------------------------- */
+.modalCard{
+  &__title{
+    margin-bottom: 28px;
+    position:relative;
+    font-size:18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color:#324658;
+    @include m.pc{
+      font-size: 20px;
+      margin-bottom:40px ;
+    }
+  }
+  &__title::before{
+    content:"";
+    width:56px;
+    height:3px;
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform: translateX(-50%);
+    background: rgb(147,0,240);
+    background: linear-gradient(90deg, rgba(147,0,240,1) 0%, rgba(65,61,241,1) 50%, rgba(0,232,250,1) 100%);
+  }
+  &__content{
+    @include m.pc{
+      display:flex;
+      justify-content: center;
+      justify-content: flex-start;
+    }
+  }
+  &__nameImageWrap{
+    display:flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    @include m.pc{
+      flex-direction: column;
+       margin-right: 12px;
+    }
+  }
+  &__name{
+    order:2;
+    align-self: center;
+    margin-left:12px;
+    font-size:15px;
+    font-weight: 700;
+    @include m.pc{
+      margin-left:0px;
+    }
+  }
+  &__image{
+    order:1;
+    display:block;
+    width:48px;
+    @include m.pc{
+      width:76px;
+    }
+  }
+  &__text{
+    font-size: 13px;
+    line-height: 1.4;
+    text-align:left;
+    @include m.pc{
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+  /* 破線 */
+.dashed {
+  margin-top:20px;
+  margin-bottom:20px;
+  width:100%;
+  height:1px;
+  background-image: linear-gradient(to right, #cecece, #cecece 2px, transparent 4px, transparent 4px); /* 幅2の線を作る */
+  background-size: 8px 1px;          /* グラデーションの幅・高さを指定 */
+  background-position: left bottom;  /* 背景の開始位置を指定 */
+  background-repeat: repeat-x;       /* 横向きにのみ繰り返す */
+  @include m.pc{
+    margin-top:40px;
+  margin-bottom:40px;
+  }
+}
+

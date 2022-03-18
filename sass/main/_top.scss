@@ -5,12 +5,54 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 .top {
 
-		.layout1,
-		.layout2,
-		.layout3,
-		.layout4,
-		.layout5 {
-			padding: 80px 16px;
+	//.layout1,
+	//.layout2,
+	//.layout3,
+	//.layout4,
+	//.layout5 {
+	//	padding: 80px 16px;
+	//}
+	background: url('../../assets/img/top.png') no-repeat center center;
+	background-size: 100% auto;
+	position: relative;
+	@include m.pc{
+		background: url('../../assets/img/top_pc.png') no-repeat center center;
+		background-size: 100% auto;
+		position: relative;
+	}
+	&__title {
+		text-align: center;
+		position: absolute;
+		top: 36%;
+		left: 15%;
+		@include m.pc{
+			position: absolute;
+			top: 32%;
+			left: 40%;
 		}
-		
+	}
+	&__flex {
+		display: flex;
+		align-items: center;
+		padding: 158% 35px 10%;
+		@include m.pc{
+			padding: 30% 64px 10%;
+		}
+		&--button {
+			width: 42%;
+		}
+		&--text {
+			width: 60%;
+			color: #FFF;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 20px;
+			@include m.pc{
+				font-size: 24px;
+				line-height: 40px;
+				margin-top: -25%;
+				margin-left: 37%;
+			}
+		}
+	}
 }

@@ -1,0 +1,432 @@
+@charset "UTF-8";
+//mixin用
+@use '../foundation/mixin' as m;
+
+.howToAsk{
+  background-image: url('../../assets/img/timeline.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include m.pc{
+    background-image: url('../../assets/img/timeline_pc.jpg');
+  }
+  .inner{
+    padding:0 4.2%;
+  }
+
+  &__titleWrap{
+    @include m.h2-titleWrap;
+    @include m.pc{
+      font-size: 33px;
+    }
+  }
+  &__titleWrap::before{
+    @include m.underbar;
+  }
+  &__title{
+    @include m.h2-title;
+  }
+  &__image{
+    @include m.h2-image;
+  }
+
+
+  &__textWrap{
+    margin-top:48px;
+  }
+
+  &__text{
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    @include m.pc{
+      font-size: 24px;
+    }
+  }
+}
+
+/*-------------
+1日のスケジュール
+--------------*/
+/*受講生の例*/
+.howToAsk__exampleWrap{
+  margin-top: 24px;
+}
+.exampleWrap{
+  display:flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: flex-end;
+  @include m.pc{
+    column-gap: 90px;
+  }
+}
+.example{
+  width:38%;
+  max-width:145px;
+  @include m.pc{
+    width:233px;
+    max-width:none;
+  }
+  &__personIntroduction{
+    padding:12px 0 36px;
+    font-size:14px;
+    line-height:1.8;
+    text-align: center;
+    color:white;
+    @include m.pc{
+      font-size: 16px;
+    }
+    span{
+      font-weight:bold;
+    }
+  }
+}
+
+.example--yusui{
+  .example__personIntroduction{
+    background-color:#3A61BD;
+  }
+}
+.example--misato{
+  .example__personIntroduction{
+    background-color:#C74A20;
+  }
+}
+
+/*タイムスケジュール*/
+.timeSchem{
+  position:relative;//ラウンジ利用の画像とテキストと横棒
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:996px;
+
+  &__icon{
+    width:60%;
+    display:block;
+    position:relative;
+    margin:0 auto;
+    top:-20px;
+    @include m.pc{
+      width:40%;
+      top:-30px;
+    }
+  }
+  &__image{
+    display:block;
+    width:115%;
+    @include m.pc{
+      width:90%;
+    }
+  }
+}
+//ゆーすいのドット模様
+.timeSchem--yusui{
+  background-image: url('../../assets/img/dotBox_yusui.png');
+  @include m.pc{
+    background-image: url('../../assets/img/dotBox_yusui_pc.png');
+  }
+}
+//みさとのドット模様
+.timeSchem--misato{
+  background-image: url('../../assets/img/dotBox_misato.png');
+  @include m.pc{
+    background-image: url('../../assets/img/dotBox_misato_pc.png');
+  }
+}
+
+
+
+.example--yusui{
+  //ラウンジ利用の画像1,2
+  .timeSchem__image{
+    transform:translateX(-10px);
+    @include m.pc{
+      transform:translateX(10px);
+    }
+  }
+  //ラウンジ利用の画像1
+  .timeSchem__image--position1{
+    position:absolute;
+    top:170px;
+    z-index:1;
+  }
+  //ラウンジ利用の画像2
+  .timeSchem__image--position2{
+    position:absolute;
+    top:620px;
+    z-index:1;
+  }
+  //行動の共通
+  .timeSchem__action{
+    position:absolute;
+    color:#3A61BD;
+    right:25px;
+    @include m.pc{
+        right:60px;
+    }
+  }
+  //起床
+  .timeSchem__action:nth-of-type(1){
+    top:145px;
+  }
+  .timeSchem__action:nth-of-type(1)::before{
+    content:"";
+    top:8px;
+    right:-47px;
+    width:40px;
+    height:2px;
+    background-color: #3A61BD;
+    position:absolute;
+    @include m.pc{
+      right:-162px;
+      width:150px;
+    }
+  }
+  //出社
+  .timeSchem__action:nth-of-type(2){
+    top:375px;
+    @include m.pc{
+      top:446px;
+    }
+  }
+  .timeSchem__action:nth-of-type(2)::before{
+    content:"";
+    top:8px;
+    right:-47px;
+    width:40px;
+    height:2px;
+    background-color: #3A61BD;
+    position:absolute;
+    @include m.pc{
+      content:"";
+      width: 150px;
+      height: 73px;
+      top: -63px;
+      right: -163px;
+      background-image: url("../../assets/img/timeshem_kaku.png");
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-color: transparent;
+    }
+  }
+  //帰宅＆仮眠
+  .timeSchem__action:nth-of-type(3){
+    top:557px;
+    @include m.pc{
+      top:558px;
+    }
+  }
+  .timeSchem__action:nth-of-type(3)::before{
+    content:"";
+    top:8px;
+    right:-47px;
+    width:40px;
+    height:2px;
+    background-color: #3A61BD;
+    position:absolute;
+    @include m.pc{
+      right:-162px;
+      width:150px;
+    }
+  }
+  //家事
+  .timeSchem__action:nth-of-type(4){
+    top:605px;
+  }
+  .timeSchem__action:nth-of-type(4)::before{
+    content:"";
+    top:8px;
+    right:-47px;
+    width:40px;
+    height:2px;
+    background-color: #3A61BD;
+    position:absolute;
+    @include m.pc{
+      right:-162px;
+      width:150px;
+    }
+  }
+  //就寝
+  .timeSchem__action:nth-of-type(5){
+    top:882px;
+  }
+  .timeSchem__action:nth-of-type(5)::before{
+    content:"";
+    top:8px;
+    right:-47px;
+    width:40px;
+    height:2px;
+    background-color: #3A61BD;
+    position:absolute;
+    @include m.pc{
+      right:-162px;
+      width:150px;
+    }
+  }
+
+}
+
+
+.example--misato{
+  //ラウンジ利用の画像1
+  .timeSchem__image{
+    transform:translateX(-10px);
+    @include m.pc{
+      transform:translateX(10px);
+    }
+  }
+  //ラウンジ利用の画像1
+  .timeSchem__image--position1{
+    position:absolute;
+    top:420px;
+    z-index:1;
+    @include m.pc{
+      top:410px;
+    }
+  }
+   //行動の共通
+  .timeSchem__action{
+    position:absolute;
+    color:#C74A20;
+    left:20px;
+    @include m.pc{
+      left:57px;
+  }
+  }
+    //起床、ドラマ、朝食
+    .timeSchem__action:nth-of-type(1){
+      top:282px;
+    }
+    .timeSchem__action:nth-of-type(1)::before{
+      content:"";
+      top:8px;
+      left:-45px;
+      width:40px;
+      height:2px;
+      background-color: #C74A20;
+      position:absolute;
+      @include m.pc{
+        left:-162px;
+        width:150px;
+      }
+    }
+    //夕飯
+    .timeSchem__action:nth-of-type(2){
+      top:650px;
+      @include m.pc{
+        top:651px;
+      }
+    }
+    .timeSchem__action:nth-of-type(2)::before{
+      content:"";
+      top:8px;
+      left:-45px;
+      width:40px;
+      height:2px;
+      background-color: #C74A20;
+      position:absolute;
+      @include m.pc{
+        left:-162px;
+        width:150px;
+      }
+    }
+    //自由時間
+    .timeSchem__action:nth-of-type(3){
+      top:696px;
+    }
+    .timeSchem__action:nth-of-type(3)::before{
+      content:"";
+      top:8px;
+      left:-45px;
+      width:40px;
+      height:2px;
+      background-color: #C74A20;
+      position:absolute;
+      @include m.pc{
+        left:-162px;
+        width:150px;
+      }
+    }
+    //家事
+    .timeSchem__action:nth-of-type(4){
+      top:835px;
+    }
+    .timeSchem__action:nth-of-type(4)::before{
+      content:"";
+      top:8px;
+      left:-45px;
+      width:40px;
+      height:2px;
+      background-color: #C74A20;
+      position:absolute;
+      @include m.pc{
+        left:-162px;
+        width:150px;
+      }
+    }
+}
+
+/*---------
+受講生二人の声
+----------*/
+.howToAsk__voiceCardsWrap{
+  margin-top:60px ;
+  padding-bottom: 80px;
+  @include m.pc{
+    display:flex;
+    justify-content: center;
+    column-gap: 45px;
+  }
+}
+.voiceCard{
+  position: relative;
+  max-width: 342px;
+  margin:0 auto;
+  border-radius:6px ;
+  border:2px solid white;
+  @include m.pc{
+    max-width:none;
+    width:342px;
+    margin:0;
+  }
+  &__text{
+    padding:54px 28px 58px;
+    color:white;
+    line-height:1.5;
+  }
+}
+//みさとカード指定
+.voiceCard:nth-of-type(2){
+  margin-top: 66px;
+  @include m.pc{
+    margin-top: 0;;
+    }
+  }
+.voiceCard--yusui::before{
+  content:"";
+  position:absolute;
+  width:87px;
+  height:87px;
+  background-image: url("../../assets/img/yusui.png");
+  // background-image: url(../../images/yusui.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:0;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.voiceCard--misato::before{
+  content:"";
+  position:absolute;
+  width:87px;
+  height:87px;
+  background-image: url("../../assets/img/misato.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:0;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+

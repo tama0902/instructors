@@ -16,6 +16,25 @@
 <body>
 
 <div class="container">
+	<section class="top">
+		<div class="layout1">
+			<h1 class="top__title">
+				<picture>
+					<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/title_pc.svg">
+					<img src="./assets/svg/title.svg" alt="ページタイトル">
+				</picture>
+			</h1>
+			<div class="top__flex">
+				<picture class="top__flex--button">
+					<source type="image/png" media="(min-width:1024px )" srcset="./assets/img/scroll_pc.png">
+					<img src="./assets/img/scroll.png" alt="スクロールボタン">
+				</picture>
+				<div class="top__flex--text">
+					<h2>半年間一緒に過ごした<br class="sp">受講生だからわかる、<br>講師の本当の姿を徹底解説。</h2>
+				</div>
+			</div>
+		</div>
+	</section>
 		<section class="container__wrapper intro">
 			<div class="layout1">
 				<div class="question__titleWrap">
@@ -34,15 +53,28 @@
 						<span class="intro__ash--first">哲也</span>
 					</h3>
 				</div>
-				<div class="layout4 intro__heading intro__heading--ash">
-					<div class="intro__heading--flex">
-						<h4 class="intro__heading--title"><img src="https://fontmeme.com/permalink/220315/933937163288103115a2d69b30bcf6ef.png" alt="0" class="intro__heading--number">から<br><img src="https://fontmeme.com/permalink/220317/498e9b0f25858d678719785b87030bca.png" alt="lcd-lcd-mono-font">を生み出す<br>クリエイター</h4>
-						<p class="intro__heading--txt">
-							柔軟な思考と常識に囚われない発想力に秀でており、受講生の表現の幅を広げてくれる。相手の意図を論理的かつ的確に把握し、誰にでもわかりやすく説明するのが得意。
-						</p>
-						<div class="intro__heading--img2"> <img src="assets/img/intro2_ash.png" alt="芦沢さん画像2">
+				<div class="layout8">
+					<div class="layout4 intro__heading intro__heading--ash">
+						<div class="intro__heading--flex">
+							<h4 class="intro__heading--title">
+								<picture>
+								<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/number00_pc.svg">
+								<img src="./assets/svg/number00.svg" alt="00" class="intro__heading--number">
+								</picture>
+								から<br>
+								<picture>
+									<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/number01_pc.svg">
+									<img src="./assets/svg/number01.svg" alt="01" class="intro__heading--number">
+								</picture>
+								を生み出す<br>クリエイター</h4>
+							<p class="intro__heading--txt">
+								柔軟な思考と常識に囚われない発想力に秀でており、受講生の表現の幅を広げてくれる。相手の意図を論理的かつ的確に把握し、誰にでもわかりやすく説明するのが得意。
+							</p>
+							<div class="intro__heading--img2"> <img src="assets/img/intro2_ash.png" alt="芦沢さん画像2">
+							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<div class="layout5 intro__content">
@@ -62,15 +94,28 @@
 						<span class="intro__og--first">裕行</span>
 					</h3>
 				</div>
+				<div class="layout8">
 				<div class="layout4 intro__heading intro__heading--og">
 
 					<div class="intro__heading--flex">
-						<h4 class="intro__heading--title"><img src="https://fontmeme.com/permalink/220317/3a1d6fd268716502ddf0e10aa6e5bdda.png" alt="01" class="intro__heading--number">を<br><img src="https://fontmeme.com/permalink/220315/6ff17c98b80dc766eea01f79038c7a17.png" alt="10">にする<br>クリエイター</h4>
+						<h4 class="intro__heading--title">
+							<picture>
+							<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/number01_og_pc.svg">
+							<img src="./assets/svg/number01_og.svg" alt="01" class="intro__heading--number">
+							</picture>
+							を<br>
+							<picture>
+								<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/number10_pc.svg">
+								<img src="./assets/svg/number10.svg" alt="10" class="intro__heading--number">
+							</picture>
+							にする<br>クリエイター</h4>
 						<p class="intro__heading--txt">豊富な情報や経験、幅広い視野を持っており、受講生の見落としがちなポイントを的確に指導。<br>相手に寄り添って優しく指導し、受講生のアウトプットの品質をさらに向上させてくれる。
 						</p>
 						<div class="intro__heading--img2"> <img src="assets/img/intro2_og.png" alt="荻野さん画像2">
 						</div>
 					</div>
+				</div>
+					
 				</div>
 			</div>
 			<div class="layout5 intro__content">
@@ -150,8 +195,8 @@
 
 		</section>
 		<section class="container__wrapper question">
-			<video id="bg-video" class="sp" webkit-playsinline playsinline muted autoplay loop><source src="../instructors/assets/video/question.mp4"></video>
-				<div class="overlay sp"></div>
+			<video id="bg-video" webkit-playsinline playsinline muted autoplay loop><source src="./assets/video/koushi_section_video_short_comp.mp4"></video>
+				<div class="overlay"></div>
 				<div class="layout1 video-area">
 					<div class="layout2">
 						<div class="question__titleWrap">
@@ -167,7 +212,7 @@
 						<ul class="questionLists">
 							<li class="questionLists__item questionList">
 								<a href="#" class="js-modal-open" data-target="modal01">
-								<h3 class="questionList__title">デザインとコーディング、<br>どっちが好き?</h3>
+								<h3 class="questionList__title">デザインとコーディング、<br class="pc">どっちが好き?</h3>
 								<div id="modal01" class="modal js-modal">
 									<div class="modal__bg js-modal-close"></div>
 									<div class="modal__content questionModal">
@@ -424,7 +469,131 @@
 				
 			</div>
 		</section>
+		<section class="howToAsk">
+			<div class="inner">
+				<div class="howToAsk__titleWrap">
+					<h2 class="howToAsk__title">講師への質問<br>どうしてる?</h2>
+					<picture>
+						<source type="image/svg+xml" media="(min-width:1024px )" srcset="./assets/svg/how_pc.svg">
+						<img class="howToAsk__image" src="./assets/svg/how.svg" alt="">
+					</picture>
+				</div>
+				<div class="howToAsk__textWrap">
+					<p class="howToAsk__text">会社員とフリーランス、<br class="not-pc-br">2人の第1期受講生の一日</p>
+				</div>
+
+				<div class="howToAsk__exampleWrap exampleWrap">
+					<div class="howToAsk__example example example--yusui">
+						<div class="example__personIntroductionWrap">
+							<p class="example__personIntroduction"><span>31歳 会社員<br>ゆーすいさん</span><br>の例</p>
+						</div>
+						<div class="example__schem timeSchem timeSchem--yusui">
+							<img class="timeSchem__icon" src="./assets/img/yusui.png" alt="">
+							<div class="timeSchem__action">起床</div>
+							<div class="timeSchem__action">出社</div>
+							<div class="timeSchem__action">帰宅＆仮眠</div>
+							<div class="timeSchem__action">家事</div>
+							<div class="timeSchem__action">就寝</div>
+							<picture>
+								<source media="(min-width:1024px)" srcset="./assets/svg/yusui_morningActivity_pc.svg" type="image/svg+xml">
+								<img class="timeSchem__image timeSchem__image--position1" src="./assets/svg/yusui_morningActivity.svg" alt="ゆーすいは5時10分から7時までラウンジで朝活をします">
+							</picture>
+							<picture>
+								<source media="(min-width:1024px)" srcset="./assets/svg/yusui_nightActivity_pc.svg" type="image/svg+xml">
+								<img class="timeSchem__image timeSchem__image--position2" src="./assets/svg/yusui_nightActivity.svg" alt="ゆーすいは19時から23時30分までラウンジで夜活をします">
+							</picture>
+						</div>
+					</div>
+					<div class="timeAxis">
+						<picture>
+							<source type="image/svg+xml" media="(min-width:1024px)" srcset="./assets/svg/schem_axis_pc.svg">
+							<img class="timeAxis__img" src="./assets/svg/schem_axis.svg" alt="">
+						</picture>
+					</div>
+					<div class="howToAsk__example example example--misato">
+						<div class="example__personIntroductionWrap">
+							<p class="example__personIntroduction"><span>24歳 フリーランス<br>みさとさん</span><br>の例</p>
+						</div>
+						<div class="example__schem timeSchem timeSchem--misato">
+								<img class="timeSchem__icon" src="./assets/img/misato.png" alt="">
+							<div class="timeSchem__action">起床<br>前日のドラマ<br>朝食</div>
+							<div class="timeSchem__action">夕飯</div>
+							<div class="timeSchem__action">自由時間</div>
+							<div class="timeSchem__action">就寝</div>
+							<picture>
+								<source media="(min-width:1024px)" srcset="./assets/svg/misato_Activity_pc.svg" type="image/svg+xml">
+								<img class="timeSchem__image timeSchem__image--position1" src="./assets/svg/misato_activity.svg" alt="みさとさんは9時から18時までラウンジでカリキュラムと仕事をします">
+							</picture>
+						</div>
+					</div>
+				</div>
+
+				<div class="howToAsk__voiceCardsWrap voiceCardsWrap">
+					<div class="voiceCard voiceCard--yusui">
+						<p class="voiceCard__text">
+							夜にラウンジで講師を見かける回数は少なかったですが、前日にアポさえ取れば確実に相談できました。<br>直接ラウンジで話しかける方がニュアンスも含めて伝わるし、いろんな経験談も聞かせてもらえるので、とても勉強になりました!
+						</p>
+					</div>
+					<div class="voiceCard voiceCard--misato">
+						<p class="voiceCard__text">
+							夜にラウンジで講師を見かける回数は少なかったですが、前日にアポさえ取れば確実に相談できました。<br>直接ラウンジで話しかける方がニュアンスも含めて伝わるし、いろんな経験談も聞かせてもらえるので、とても勉強になりました!
+						</p>
+					</div>
+				</div>
+			</div><!-- .inner -->
+		</section>
+
+		<section class="conversion">
+			<div class="conversion__inner">
+				<div class="conversion__whiteBox">
+					<div class="conversion__textWrap">
+						<h2 class="conversion__title">最後にSLash第1期生<br>一同からあなたへ。</h2>
+						<p class="conversion__text">Slashは、卒業後に自分に自信をもって活躍できるクリエイターになってほしいという講師の願いが込められたスクールです。</p>
+						<p class="conversion__text">クリエイターとしてだけでなく、人としても魅力でありたい方は、芦沢さん・荻野さんの考えにも共感できるはず。</p>
+						<p class="conversion__text">初学者ともプロともいえないあなたのためにSLashはあります。ぜひSLash第2期の無料Web説明会に足を運んでみてください。</p>
+					</div>
+					<div class="conversion__logoWrap">
+						<picture>
+							<source media="(min-width:1024px )" srcset="./assets/img/logo_conversion_pc_2x.png">
+							<img class="conversion__logo" src="./assets/svg/logo_conversion.svg" alt="">
+						</picture>
+					</div>
+					<div class="conversion__buttonWrap">
+						<a class="conversionButton" href="#">第2期説明会に申し込む</a>
+						<p class="conversion__microtext">※第2期に応募するには説明会に参加することが条件です。</p>
+					</div>
+				</div>
+				<div class="conversion__imageWrap">
+					<picture>
+						<source media="(min-width=1024px)" srcset="./assets/img/ogino_asizawa_conversion_pc.jpg">
+					</picture>
+					<img class="conversion__image" src="./assets/img/ogino_asizawa_conversion.jpg" alt="">
+				</div>
+			</div>
+
+		</section>
+
+		<section class="banner">
+			<h2 class="banner__title">SLash第1期生制作ページ</h2>
+			<img src="./assets/svg/logo_conversion.svg" alt="">
+			<img src="./assets/svg/logo_conversion.svg" alt="">
+			<img src="./assets/svg/logo_conversion.svg" alt="">
+			<img src="./assets/svg/logo_conversion.svg" alt="">
+			<img src="./assets/svg/logo_conversion.svg" alt="">
+		</section>
+		<footer class="footer">
+			<p class="footer__text">
+				<small>&copy; 2022 SLash</small>
+			</p>
+		</footer>
 	</div>
+
+	<!--jQueryのCDN  -->
+	<script src="https://slash-school.com/members/assets/js/jquery-3.6.0.min.js"></script>
+	<!-- swiperのCDN -->
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="./assets/js/swiper.js"></script>
+	<script src="./assets/js/modal-swiper.js"></script>
 </body>
 </html>
 
