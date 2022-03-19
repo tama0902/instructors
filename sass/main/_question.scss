@@ -46,6 +46,8 @@
 		}
 		.layout3 {
 			padding: 88px 24px;
+			display: flex;
+			justify-content: center;
 		}
 }
 .questionLists {
@@ -74,7 +76,8 @@
 .questionList {
 	&__title {
 		color: #446fc8;
-		min-height: 96px;
+		min-height: 120px;
+		max-width: 560px;
 		list-style: none;
 		background-color: #FFF;
 		border-radius: 16px;

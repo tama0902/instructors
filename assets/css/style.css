@@ -104,16 +104,9 @@
 .top__title {
   text-align: center;
   position: absolute;
-  top: 36%;
-  left: 15%;
-}
-@media screen and (min-width: 1024px) {
-  .top__title {
-    /*  1024pxより大きい時 */
-    position: absolute;
-    top: 32%;
-    left: 40%;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .top__flex {
   display: flex;
@@ -216,9 +209,6 @@
     padding: 120px 0 180px;
   }
 }
-.intro .layout2 {
-  overflow: hidden;
-}
 @media screen and (min-width: 1024px) {
   .intro .layout2 {
     /*  1024pxより大きい時 */
@@ -293,18 +283,18 @@
   .intro__name {
     /*  1024pxより大きい時 */
     font-size: 130px;
-    height: 173px;
   }
+}
+.intro__name--en {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  color: #324658;
+  opacity: 0.1;
 }
 .intro__ash {
   position: relative;
   padding-top: 35px;
-}
-@media screen and (min-width: 1024px) {
-  .intro__ash {
-    /*  1024pxより大きい時 */
-    overflow: visible;
-  }
 }
 .intro__ash span:nth-of-type(1) {
   color: #446fc8;
@@ -332,17 +322,6 @@
     left: 261px;
   }
 }
-.intro__ash::before {
-  content: "ASHIZAWA";
-  position: absolute;
-  top: 136px;
-  left: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 100px;
-  font-weight: 900;
-  color: #324658;
-  opacity: 0.1;
-}
 .intro__ash--first {
   position: relative;
 }
@@ -365,12 +344,6 @@
 .intro__og {
   position: relative;
   padding-top: 35px;
-}
-@media screen and (min-width: 1024px) {
-  .intro__og {
-    /*  1024pxより大きい時 */
-    overflow: visible;
-  }
 }
 .intro__og span:nth-of-type(1) {
   color: #446fc8;
@@ -1051,6 +1024,8 @@
 }
 .question .layout3 {
   padding: 88px 24px;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1081,7 +1056,8 @@
 
 .questionList__title {
   color: #446fc8;
-  min-height: 96px;
+  min-height: 120px;
+  max-width: 560px;
   list-style: none;
   background-color: #FFF;
   border-radius: 16px;

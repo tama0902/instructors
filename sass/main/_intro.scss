@@ -21,7 +21,6 @@
 		}
 	}
 	.layout2 {
-		overflow: hidden;
 		@include m.pc{
 			padding-top: 28px;
 		}
@@ -81,31 +80,21 @@
 		top: -50px;
 		@include m.pc{
 			font-size: 130px;
-			height: 173px;
 		}
-	}
-	&__ash {
-		position: relative;
-		@include m.pc{
-			overflow: visible;
-		}
-		
-		padding-top: 35px;
-		span:nth-of-type(1){color:#446fc8}
-		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
-
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
-		&::before {
-			content: "ASHIZAWA";
-			position: absolute;
-			top: 136px;
-			left: 0;
+		&--en {
 			font-family: v.$base_font;
 			font-size: 100px;
 			font-weight: 900;
 			color: #324658;
 			opacity: 0.1;
 		}
+	}
+	&__ash {
+		position: relative;
+		padding-top: 35px;
+		span:nth-of-type(1){color:#446fc8}
+		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
 	}
 	&__ash--first {
 		position: relative;
@@ -126,13 +115,9 @@
 
 	&__og {
 		position: relative;
-		@include m.pc{
-			overflow: visible;
-		}
 		padding-top: 35px;
 		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
-
 		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
 		&::before {
 			content: "OGINO";
