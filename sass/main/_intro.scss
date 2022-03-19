@@ -21,6 +21,7 @@
 		}
 	}
 	.layout2 {
+		overflow: hidden;
 		@include m.pc{
 			padding-top: 28px;
 		}
@@ -85,7 +86,10 @@
 	}
 	&__ash {
 		position: relative;
-		overflow: hidden;
+		@include m.pc{
+			overflow: visible;
+		}
+		
 		padding-top: 35px;
 		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
@@ -122,7 +126,9 @@
 
 	&__og {
 		position: relative;
-		overflow: hidden;
+		@include m.pc{
+			overflow: visible;
+		}
 		padding-top: 35px;
 		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
@@ -206,8 +212,8 @@
 			line-height: 24px;
 			background-color: #FFF;
 			color: #324658;
-			padding: 16px 24px 64px;
-			width: 95.6%;
+			padding: 16px 24px;
+			max-width: 264px;
 			margin-left: auto;
 			@include m.pc{
 				background-color: transparent;

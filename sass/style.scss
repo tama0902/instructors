@@ -27,7 +27,13 @@
 @use './main/box';
 @use './main/intro';
 @use './main/point';
+@use './main/contact';
 @use './main/question';
 @use './main/voice';
-@use './main/contact';
 @use './main/conversion';
+@use './main/modal.question';
+@use './main/button';
+@use './main/studentsVoice';
+@use './main/howToAsk';
+@use './main/banner';
+@use './main/footer';
