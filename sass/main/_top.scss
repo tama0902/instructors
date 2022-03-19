@@ -12,13 +12,15 @@
 	//.layout5 {
 	//	padding: 80px 16px;
 	//}
-	background: url('../../assets/img/top.png') no-repeat center center;
-	background-size: 100% auto;
-	position: relative;
-	@include m.pc{
-		background: url('../../assets/img/top_pc.png') no-repeat center center;
-		background-size: 100% auto;
+	.layout1 {
+		background: url('../../assets/img/top.png') no-repeat center center;
+		background-size: cover;
 		position: relative;
+		@include m.pc{
+			background: url('../../assets/img/top_pc.png') no-repeat center center;
+			background-size: cover;
+			position: relative;
+		}
 	}
 	&__title {
 		text-align: center;

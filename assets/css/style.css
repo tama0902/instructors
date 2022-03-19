@@ -88,16 +88,16 @@
   }
 }
 
-.top {
+.top .layout1 {
   background: url("../../assets/img/top.png") no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover;
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  .top {
+  .top .layout1 {
     /*  1024pxより大きい時 */
     background: url("../../assets/img/top_pc.png") no-repeat center center;
-    background-size: 100% auto;
+    background-size: cover;
     position: relative;
   }
 }
