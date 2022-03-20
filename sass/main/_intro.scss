@@ -6,6 +6,7 @@
 
 .intro {
 	font-family: v.$base_font;
+	overflow: hidden;
 	@include m.pc{
 		.layout1,
 		.layout2,
@@ -28,6 +29,7 @@
 	.layout3 {
 		padding-bottom: 50px;
 		padding-left: 16px;
+		height: 146px;
 		@include m.pc{
 			padding-bottom: 0;
 		}
@@ -41,6 +43,7 @@
 		}
 	}
 	.layout5 {
+		padding-bottom: 30px;
 		@include m.pc{
 			padding-top: 320px;
 			padding-bottom: 280px;
@@ -49,8 +52,12 @@
 	.layout8 {
 		padding-left: 16px;
 	}
+	.layout9 {
+		background-color: #FFF;
+		height: 95px;
+	}
 	&__teacher {
-		background-color: #f0f0f0 !important;
+		background-color: #f0f0f0;
 		position: relative;
 		z-index: 0;
 		&::before {
@@ -65,6 +72,20 @@
 			background-color: #324658;
 			@include m.pc {
 			transform: skewY(-15deg);
+			bottom: -60px;
+			top: 282px;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 153px;
+			bottom: 143px;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			background: url(../../assets/img/dotBox_intro.png);
+			@include m.pc {
 			bottom: -60px;
 			top: 282px;
 			}
@@ -87,6 +108,9 @@
 			font-weight: 900;
 			color: #324658;
 			opacity: 0.1;
+			overflow: hidden;
+			padding:45px 0;
+			margin-top: -30px;
 		}
 	}
 	&__ash {
@@ -119,17 +143,6 @@
 		span:nth-of-type(1){color:#446fc8}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
 		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
-		&::before {
-			content: "OGINO";
-			position: absolute;
-			top: 136px;
-			left: 0;
-			font-family: v.$base_font;
-			font-size: 100px;
-			font-weight: 900;
-			color: #324658;
-			opacity: 0.1;
-		}
 	}
 	&__og--first {
 		position: relative;
@@ -152,16 +165,18 @@
 		@include m.pc{
 		}
 		&--ash {
-			background: url(../../assets/img/intro1_ash.png) no-repeat;
+			background: url(../../assets/img/intro1_ash.jpg) no-repeat;
 			background-size: 70%;
 			@include m.pc{
+			background: url(../../assets/img/intro1_ash_pc.jpg) no-repeat;
 			background-size: 46% auto;
 			}
 		}
 		&--og {
-			background: url(../../assets/img/intro1_og.png) no-repeat;
+			background: url(../../assets/img/intro1_og.jpg) no-repeat;
 			background-size: 70%;
 			@include m.pc{
+			background: url(../../assets/img/intro1_og_pc.jpg) no-repeat;
 			background-size: 46% auto;
 			}
 		}
@@ -238,10 +253,17 @@
 		background-color: #f0f0f0;
 		position: relative;
 		z-index: -1;
+		display: flex;
+		flex-flow: column;
+		@include m.pc {
+			flex-flow: row;
+		}
+		align-items: center;
+		justify-content: center;
 		&::before {
 			content: "";
 			position: absolute;
-			top: 224px;
+			top: 360px;
 			bottom: -384px;
 			left: 0;
 			right: 0;
@@ -252,21 +274,18 @@
 			background:linear-gradient(to right, #243C74, #2EB6C5);
 			@include m.pc {
 			transform: skewY(-15deg);
-			bottom: -60px;
+			bottom: -300px;
 			top: 282px;
 			}
 		}
 		@include m.pc{
 		display: flex;
 		margin-left: -200px;
+		overflow: hidden;
 		}
 		&--feature {
 			img {
-				width: 100%;
-				display: block;
-				margin: 0 auto;
 				@include m.pc{
-					width: 130%;
 				}
 			}
 		}

@@ -188,6 +188,7 @@
 
 .intro {
   font-family: "Noto Sans JP", sans-serif;
+  overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .intro {
@@ -218,6 +219,7 @@
 .intro .layout3 {
   padding-bottom: 50px;
   padding-left: 16px;
+  height: 146px;
 }
 @media screen and (min-width: 1024px) {
   .intro .layout3 {
@@ -236,6 +238,9 @@
     margin: 0;
   }
 }
+.intro .layout5 {
+  padding-bottom: 30px;
+}
 @media screen and (min-width: 1024px) {
   .intro .layout5 {
     /*  1024pxより大きい時 */
@@ -246,8 +251,12 @@
 .intro .layout8 {
   padding-left: 16px;
 }
+.intro .layout9 {
+  background-color: #FFF;
+  height: 95px;
+}
 .intro__teacher {
-  background-color: #f0f0f0 !important;
+  background-color: #f0f0f0;
   position: relative;
   z-index: 0;
 }
@@ -266,6 +275,23 @@
   .intro__teacher::before {
     /*  1024pxより大きい時 */
     transform: skewY(-15deg);
+    bottom: -60px;
+    top: 282px;
+  }
+}
+.intro__teacher::after {
+  content: "";
+  position: absolute;
+  top: 153px;
+  bottom: 143px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url(../../assets/img/dotBox_intro.png);
+}
+@media screen and (min-width: 1024px) {
+  .intro__teacher::after {
+    /*  1024pxより大きい時 */
     bottom: -60px;
     top: 282px;
   }
@@ -291,6 +317,9 @@
   font-weight: 900;
   color: #324658;
   opacity: 0.1;
+  overflow: hidden;
+  padding: 45px 0;
+  margin-top: -30px;
 }
 .intro__ash {
   position: relative;
@@ -371,17 +400,6 @@
     left: 261px;
   }
 }
-.intro__og::before {
-  content: "OGINO";
-  position: absolute;
-  top: 136px;
-  left: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 100px;
-  font-weight: 900;
-  color: #324658;
-  opacity: 0.1;
-}
 .intro__og--first {
   position: relative;
 }
@@ -410,22 +428,24 @@
   }
 }
 .intro__heading--ash {
-  background: url(../../assets/img/intro1_ash.png) no-repeat;
+  background: url(../../assets/img/intro1_ash.jpg) no-repeat;
   background-size: 70%;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--ash {
     /*  1024pxより大きい時 */
+    background: url(../../assets/img/intro1_ash_pc.jpg) no-repeat;
     background-size: 46% auto;
   }
 }
 .intro__heading--og {
-  background: url(../../assets/img/intro1_og.png) no-repeat;
+  background: url(../../assets/img/intro1_og.jpg) no-repeat;
   background-size: 70%;
 }
 @media screen and (min-width: 1024px) {
   .intro__heading--og {
     /*  1024pxより大きい時 */
+    background: url(../../assets/img/intro1_og_pc.jpg) no-repeat;
     background-size: 46% auto;
   }
 }
@@ -516,11 +536,21 @@
   background-color: #f0f0f0;
   position: relative;
   z-index: -1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .intro__content {
+    /*  1024pxより大きい時 */
+    flex-flow: row;
+  }
 }
 .intro__content::before {
   content: "";
   position: absolute;
-  top: 224px;
+  top: 360px;
   bottom: -384px;
   left: 0;
   right: 0;
@@ -534,7 +564,7 @@
   .intro__content::before {
     /*  1024pxより大きい時 */
     transform: skewY(-15deg);
-    bottom: -60px;
+    bottom: -300px;
     top: 282px;
   }
 }
@@ -543,17 +573,12 @@
     /*  1024pxより大きい時 */
     display: flex;
     margin-left: -200px;
+    overflow: hidden;
   }
-}
-.intro__content--feature img {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
   .intro__content--feature img {
     /*  1024pxより大きい時 */
-    width: 130%;
   }
 }
 .intro__box {
@@ -564,14 +589,13 @@
 .point {
   font-family: "Noto Sans JP", sans-serif;
   color: #001429;
+  position: relative;
+  overflow: hidden;
 }
-@media screen and (min-width: 1024px) {
-  .point {
-    /*  1024pxより大きい時 */
-    background: url("../../assets/img/cyberParts_r.png"), url("../../assets/img/cyberParts_l.png");
-    background-position: right top 150px, left -100px bottom 100px;
-    background-repeat: no-repeat, no-repeat;
-  }
+.point .point__image--r3 {
+  position: absolute;
+  top: 100px;
+  right: 30px;
 }
 .point .layout2 {
   padding: 88px 24px 0;
@@ -579,19 +603,18 @@
 @media screen and (min-width: 1024px) {
   .point .layout2 {
     /*  1024pxより大きい時 */
-    padding: 88px 18.73%;
+    padding: 0 18.73%;
   }
 }
 .point .layout3 {
-  padding: 88px 10.6% 0;
-  background: url("../../assets/img/cyberBox.png") no-repeat;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10.6%;
 }
 @media screen and (min-width: 1024px) {
   .point .layout3 {
     /*  1024pxより大きい時 */
-    background-image: none;
-    padding: 88px 18.73%;
+    padding: 0 18.73%;
   }
 }
 .point__content {
@@ -608,6 +631,28 @@
   .point__content--txt {
     /*  1024pxより大きい時 */
     padding: 80px 128px 24px;
+  }
+}
+.point__image--r1 {
+  position: absolute;
+  top: 147px;
+  right: -70px;
+}
+.point__image--r2 {
+  position: absolute;
+  top: 1400px;
+  right: -70px;
+}
+.point__image--l {
+  position: absolute;
+  top: 786px;
+  left: -60px;
+}
+@media screen and (min-width: 1024px) {
+  .point__image--l {
+    /*  1024pxより大きい時 */
+    top: 190px;
+    left: -60px;
   }
 }
 .point__list {
@@ -1351,6 +1396,7 @@
   background-color: #fff;
   margin: 0 4.2%;
   padding: 28px;
+  margin-top: -32px;
   display: flex;
   flex-direction: column;
 }
@@ -1728,9 +1774,6 @@
   background-color: #fff;
 }
 
-.studentsVoice {
-  background-color: #125ed0;
-}
 .studentsVoice__title {
   font-size: 15px;
   font-weight: 600;
