@@ -14,41 +14,39 @@
 	@include m.pc{
 	background: url('../../assets/img/dotBox_question_pc.png');
   }
-	&__titleWrap{
-		@include m.h2-titleWrap;
-		@include m.pc{
-			font-size: 33px;;
+  &__titleWrap{
+    @include m.h2-titleWrap;
+    @include m.pc{
+      @include m.h2-titleWrap_pc;
+    }
+  }
+
+  &__title{
+    @include m.h2-title;
+  }
+  &__title::before{
+    @include m.underbar;
+    @include m.pc{
+      @include m.underbar_pc;
+    }
+  }
+	.layout1 {
+		@include m.pc {
+			padding: 56px auto 0;
 		}
 	}
-	  &__titleWrap::before{
-		@include m.underbar;
+	.layout2 {
+		padding: 0;
+		@include m.pc {
+			padding-top: 88px;
 		}
-	  &__title{
-		@include m.h2-title;
 	}
-		&__image{
-		@include m.h2-image;
-		}
-		//.layout1,
-		//.layout2,
-		//.layout3,
-		//.layout4,
-		//.layout5 {
-			//padding: 80px 16px;
-		//}
-		.layout1 {
-			@include m.pc {
-				padding: 56px 18.75% 0;
-			}
-		}
-		.layout2 {
-			padding: 56px 0 0;
-		}
-		.layout3 {
-			padding: 88px 24px;
-			display: flex;
-			justify-content: center;
-		}
+	.layout3 {
+		padding: 128px 24px;
+		
+		display: flex;
+		justify-content: center;
+	}
 }
 .questionLists {
 	@include m.pc {
@@ -56,6 +54,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		position: relative;
+		max-width: 1200px;
 		&::after {
 			content: "";
 			display: block;

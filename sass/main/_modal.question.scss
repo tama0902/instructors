@@ -5,21 +5,20 @@
 /* ---------------------------- */
 /* --- カードセクション --- */
 /* ---------------------------- */
-.card{
-  margin-top: 24px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  &__item{
-    width: calc((100% - 56px) / 3);
-    background-color: rgb(182, 226, 112);
-    cursor: pointer;
-    margin-bottom: 40px;
-    &:not(:nth-child(3n-2)){
-      margin-left:28px;
-    }
-  }
-}
+//.card{
+//  margin-top: 24px;
+//  width: 100%;
+//  display: flex;
+//  flex-wrap: wrap;
+//  &__item{
+//    width: calc((100% - 56px) / 3);
+//    cursor: pointer;
+//    margin-bottom: 40px;
+//    &:not(:nth-child(3n-2)){
+//      margin-left:28px;
+//    }
+//  }
+//}
 /* ---------------------------- */
 /* --- ModalSection --- */
 /* ---------------------------- */

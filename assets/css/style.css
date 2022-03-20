@@ -89,14 +89,14 @@
 }
 
 .top .layout1 {
-  background: url("../../assets/img/top.png") no-repeat center center;
+  background: url("../../assets/img/top.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
 }
 @media screen and (min-width: 1024px) {
   .top .layout1 {
     /*  1024pxより大きい時 */
-    background: url("../../assets/img/top_pc.png") no-repeat center center;
+    background: url("../../assets/img/top_pc.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
   }
@@ -195,14 +195,13 @@
     /*  1024pxより大きい時 */
   }
   .intro .layout1,
-.intro .layout2,
 .intro .layout4,
 .intro .layout5 {
     padding: 80px 18.75%;
   }
 }
 .intro .layout1 {
-  padding: 64px 0 96px;
+  padding: 0 0 96px;
 }
 @media screen and (min-width: 1024px) {
   .intro .layout1 {
@@ -224,7 +223,8 @@
 @media screen and (min-width: 1024px) {
   .intro .layout3 {
     /*  1024pxより大きい時 */
-    padding-bottom: 0;
+    padding: 0 18.75%;
+    margin-bottom: 87px;
   }
 }
 .intro .layout4 {
@@ -250,51 +250,83 @@
 }
 .intro .layout8 {
   padding-left: 16px;
+  transform: skewY(23deg);
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout8 {
+    /*  1024pxより大きい時 */
+    transform: skewY(15deg);
+    padding: 0 18.75% 8%;
+  }
 }
 .intro .layout9 {
   background-color: #FFF;
-  height: 95px;
+  height: 150px;
+}
+.intro .layout10 {
+  background-color: #324658;
+  transform: skewY(-23deg);
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout10 {
+    /*  1024pxより大きい時 */
+    transform: skewY(-15deg);
+  }
+}
+.intro .layout10::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../../assets/img/dotBox_intro.png) no-repeat;
+  transform: skewY(23deg);
+  z-index: -1;
+}
+@media screen and (min-width: 1024px) {
+  .intro .layout10::after {
+    /*  1024pxより大きい時 */
+    top: 282px;
+    left: 1000px;
+    transform: skewY(15deg);
+    background: url(../../assets/img/dotBox_intro_ash_pc.png) no-repeat;
+  }
+}
+.intro__titleWrap {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .intro__titleWrap {
+    /*  1024pxより大きい時 */
+    padding-top: 100 px;
+  }
+}
+.intro__title {
+  position: relative;
+  text-align: center;
+}
+.intro__title::before {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  content: "";
+  bottom: -32px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #4c6fc2;
+}
+@media screen and (min-width: 1024px) {
+  .intro__title::before {
+    /*  1024pxより大きい時 */
+    width: 75px;
+    bottom: -60px;
+  }
 }
 .intro__teacher {
   background-color: #f0f0f0;
   position: relative;
   z-index: 0;
-}
-.intro__teacher::before {
-  content: "";
-  position: absolute;
-  top: 153px;
-  bottom: 143px;
-  left: 0;
-  right: 0;
-  transform: skewY(-23deg);
-  z-index: -1;
-  background-color: #324658;
-}
-@media screen and (min-width: 1024px) {
-  .intro__teacher::before {
-    /*  1024pxより大きい時 */
-    transform: skewY(-15deg);
-    bottom: -60px;
-    top: 282px;
-  }
-}
-.intro__teacher::after {
-  content: "";
-  position: absolute;
-  top: 153px;
-  bottom: 143px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background: url(../../assets/img/dotBox_intro.png);
-}
-@media screen and (min-width: 1024px) {
-  .intro__teacher::after {
-    /*  1024pxより大きい時 */
-    bottom: -60px;
-    top: 282px;
-  }
 }
 .intro__name {
   font-family: "游明朝体", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
@@ -533,9 +565,8 @@
   }
 }
 .intro__content {
-  background-color: #f0f0f0;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -551,7 +582,7 @@
   content: "";
   position: absolute;
   top: 360px;
-  bottom: -384px;
+  bottom: -100px;
   left: 0;
   right: 0;
   transform: skewY(-23deg);
@@ -566,6 +597,24 @@
     transform: skewY(-15deg);
     bottom: -300px;
     top: 282px;
+  }
+}
+.intro__content::after {
+  content: "";
+  position: absolute;
+  top: 360px;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: url(../../assets/img/dotBox_content.png) no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .intro__content::after {
+    /*  1024pxより大きい時 */
+    left: 200px;
+    top: 450px;
+    background: url(../../assets/img/dotBox_content_pc.png) no-repeat;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -595,7 +644,16 @@
 .point .point__image--r3 {
   position: absolute;
   top: 100px;
-  right: 30px;
+  right: -55px;
+}
+.point .layout1 {
+  padding-top: 0;
+}
+@media screen and (min-width: 1024px) {
+  .point .layout1 {
+    /*  1024pxより大きい時 */
+    padding: 88px;
+  }
 }
 .point .layout2 {
   padding: 88px 24px 0;
@@ -608,13 +666,42 @@
 }
 .point .layout3 {
   position: relative;
-  overflow: hidden;
   padding: 0 10.6%;
 }
 @media screen and (min-width: 1024px) {
   .point .layout3 {
     /*  1024pxより大きい時 */
-    padding: 0 18.73%;
+    padding: 0;
+  }
+}
+.point__titleWrap {
+  padding-top: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .point__titleWrap {
+    /*  1024pxより大きい時 */
+    padding-top: 100 px;
+  }
+}
+.point__title {
+  position: relative;
+  text-align: center;
+}
+.point__title::before {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  content: "";
+  bottom: -32px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #4c6fc2;
+}
+@media screen and (min-width: 1024px) {
+  .point__title::before {
+    /*  1024pxより大きい時 */
+    width: 75px;
+    bottom: -60px;
   }
 }
 .point__content {
@@ -667,6 +754,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .point__list::after {
     content: "";
@@ -728,7 +817,7 @@
 @media screen and (min-width: 1024px) {
   .point__list--txt {
     /*  1024pxより大きい時 */
-    padding: 40px 60px 80px 0;
+    padding: 40px 15% 80px 0;
   }
 }
 
@@ -738,13 +827,10 @@
   background-color: #324658;
   position: relative;
 }
-.contact .layout1 {
-  padding-top: 56px;
-}
 @media screen and (min-width: 1024px) {
   .contact .layout1 {
     /*  1024pxより大きい時 */
-    padding: 56px 18.75% 0 18.75%;
+    padding-top: 88px;
   }
 }
 .contact .layout2 {
@@ -753,26 +839,56 @@
 @media screen and (min-width: 1024px) {
   .contact .layout2 {
     /*  1024pxより大きい時 */
+    padding-top: 112px;
     padding-left: 18.75%;
   }
 }
 .contact .layout3 {
-  margin-top: -22px;
-  position: relative;
-  z-index: 2;
+  padding: 160px 32px 80px;
+  margin-top: -100px;
+  background: url(../../assets/img/dotBox_contact.png);
+  top: 0;
+  left: 0;
 }
 @media screen and (min-width: 1024px) {
   .contact .layout3 {
     /*  1024pxより大きい時 */
+    padding-top: 300px;
+    margin: -200px auto 0;
+    background: url(../../assets/img/dotBox_contact_pc.png);
+    top: 0;
+    left: 0;
+    max-width: 1200px;
   }
 }
-.contact .layout4 {
-  padding: 108px 32px 80px;
+.contact__titleWrap {
+  padding-top: 60px;
 }
 @media screen and (min-width: 1024px) {
-  .contact .layout4 {
+  .contact__titleWrap {
     /*  1024pxより大きい時 */
-    padding: 300px 18.75% 0 18.75%;
+    padding-top: 100 px;
+  }
+}
+.contact__title {
+  position: relative;
+  text-align: center;
+}
+.contact__title::before {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  content: "";
+  bottom: -32px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: white;
+}
+@media screen and (min-width: 1024px) {
+  .contact__title::before {
+    /*  1024pxより大きい時 */
+    width: 75px;
+    bottom: -60px;
   }
 }
 .contact__img {
@@ -996,7 +1112,7 @@
   .contact__card1 {
     /*  1024pxより大きい時 */
     width: 32%;
-    margin: 0 auto 80px 0;
+    margin: 0 4% 80px 0;
   }
 }
 .contact__card2 {
@@ -1006,7 +1122,7 @@
   .contact__card2 {
     /*  1024pxより大きい時 */
     width: 32%;
-    margin: 0 0 80px auto;
+    margin: 0 0 80px 4%;
   }
 }
 
@@ -1024,51 +1140,52 @@
   }
 }
 .question__titleWrap {
-  position: relative;
   padding-top: 60px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
 }
 @media screen and (min-width: 1024px) {
   .question__titleWrap {
     /*  1024pxより大きい時 */
-    font-size: 33px;
+    padding-top: 100 px;
   }
 }
-.question__titleWrap::before {
+.question__title {
+  position: relative;
+  text-align: center;
+}
+.question__title::before {
   position: absolute;
   width: 40px;
   height: 1px;
   content: "";
-  bottom: 0;
+  bottom: -32px;
   right: 50%;
   transform: translateX(50%);
   background-color: white;
 }
-.question__title {
-  color: white;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.question__image {
-  display: block;
-  width: 115px;
-  transform: translateY(-16px);
+@media screen and (min-width: 1024px) {
+  .question__title::before {
+    /*  1024pxより大きい時 */
+    width: 75px;
+    bottom: -60px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .question .layout1 {
     /*  1024pxより大きい時 */
-    padding: 56px 18.75% 0;
+    padding: 56px auto 0;
   }
 }
 .question .layout2 {
-  padding: 56px 0 0;
+  padding: 0;
+}
+@media screen and (min-width: 1024px) {
+  .question .layout2 {
+    /*  1024pxより大きい時 */
+    padding-top: 88px;
+  }
 }
 .question .layout3 {
-  padding: 88px 24px;
+  padding: 128px 24px;
   display: flex;
   justify-content: center;
 }
@@ -1080,6 +1197,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    max-width: 1200px;
   }
   .questionLists::after {
     content: "";
@@ -1481,22 +1599,6 @@
 /* ---------------------------- */
 /* --- カードセクション --- */
 /* ---------------------------- */
-.card {
-  margin-top: 24px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.card__item {
-  width: calc((100% - 56px) / 3);
-  background-color: #b6e270;
-  cursor: pointer;
-  margin-bottom: 40px;
-}
-.card__item:not(:nth-child(3n-2)) {
-  margin-left: 28px;
-}
-
 /* ---------------------------- */
 /* --- ModalSection --- */
 /* ---------------------------- */
@@ -1921,42 +2023,43 @@
   padding: 0 4.2%;
 }
 .howToAsk__titleWrap {
-  position: relative;
   padding-top: 60px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
 }
 @media screen and (min-width: 1024px) {
   .howToAsk__titleWrap {
     /*  1024pxより大きい時 */
-    font-size: 33px;
+    padding-top: 100 px;
   }
 }
-.howToAsk__titleWrap::before {
+.howToAsk__title {
+  position: relative;
+  text-align: center;
+}
+.howToAsk__title::before {
   position: absolute;
   width: 40px;
   height: 1px;
   content: "";
-  bottom: 0;
+  bottom: -32px;
   right: 50%;
   transform: translateX(50%);
   background-color: white;
 }
-.howToAsk__title {
-  color: white;
-  font-size: 20px;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  line-height: 1.5;
-}
-.howToAsk__image {
-  display: block;
-  width: 115px;
-  transform: translateY(-16px);
+@media screen and (min-width: 1024px) {
+  .howToAsk__title::before {
+    /*  1024pxより大きい時 */
+    width: 75px;
+    bottom: -60px;
+  }
 }
 .howToAsk__textWrap {
-  margin-top: 48px;
+  margin-top: 112px;
+}
+@media screen and (min-width: 1024px) {
+  .howToAsk__textWrap {
+    /*  1024pxより大きい時 */
+    margin-top: 148px;
+  }
 }
 .howToAsk__text {
   color: white;
@@ -1977,6 +2080,12 @@
 /*受講生の例*/
 .howToAsk__exampleWrap {
   margin-top: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .howToAsk__exampleWrap {
+    /*  1024pxより大きい時 */
+    margin-top: 70px;
+  }
 }
 
 .exampleWrap {
@@ -2349,6 +2458,8 @@
 @media screen and (min-width: 1024px) {
   .howToAsk__voiceCardsWrap {
     /*  1024pxより大きい時 */
+    margin-top: 130px;
+    padding-bottom: 130px;
     display: flex;
     justify-content: center;
     column-gap: 45px;

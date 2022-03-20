@@ -16,22 +16,26 @@
   &__titleWrap{
     @include m.h2-titleWrap;
     @include m.pc{
-      font-size: 33px;
+      @include m.h2-titleWrap_pc;
     }
   }
-  &__titleWrap::before{
-    @include m.underbar;
-  }
+
   &__title{
     @include m.h2-title;
   }
-  &__image{
-    @include m.h2-image;
+  &__title::before{
+    @include m.underbar;
+    @include m.pc{
+      @include m.underbar_pc;
+    }
   }
 
 
   &__textWrap{
-    margin-top:48px;
+    margin-top:112px;
+    @include m.pc{
+      margin-top: 148px;
+    }
   }
 
   &__text{
@@ -51,6 +55,9 @@
 /*受講生の例*/
 .howToAsk__exampleWrap{
   margin-top: 24px;
+  @include m.pc{
+    margin-top: 70px;
+  }
 }
 .exampleWrap{
   display:flex;
@@ -374,6 +381,8 @@
   margin-top:60px ;
   padding-bottom: 80px;
   @include m.pc{
+    margin-top: 130px;
+    padding-bottom: 130px;
     display:flex;
     justify-content: center;
     column-gap: 45px;

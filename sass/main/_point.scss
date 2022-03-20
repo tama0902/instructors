@@ -12,7 +12,7 @@
 	.point__image--r3 {
 		position: absolute;
 		top: 100px;
-		right: 30px;
+		right: -55px;
 	}
 	//.layout1,
 	//.layout2,
@@ -21,6 +21,12 @@
 	//.layout5 {
 		//padding: 80px 16px;
 	//}
+	.layout1 {
+		padding-top: 0;
+		@include m.pc {
+		padding: 88px;
+		}
+	}
 	.layout2 {
 		padding: 88px 24px 0;
 		@include m.pc {
@@ -29,12 +35,27 @@
 	}
 	.layout3 {
 		position: relative;
-		overflow: hidden;
 		padding: 0 10.6%;
 		@include m.pc {
-		padding: 0 18.73%;
+		padding: 0;
 		}
 	}
+  &__titleWrap{
+    @include m.h2-titleWrap;
+    @include m.pc{
+      @include m.h2-titleWrap_pc;
+    }
+  }
+
+  &__title{
+    @include m.h2-title;
+  }
+  &__title::before{
+    @include m.underbar_b;
+    @include m.pc{
+      @include m.underbar_b_pc;
+    }
+  }
 	&__content {
 		line-height: v.$base_l-height;
 		margin: 0 auto;
@@ -78,6 +99,8 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 			position: relative;
+			max-width: 1200px;
+			margin: 0 auto;
 			&::after {
 				content: "";
 				display: block;
@@ -134,7 +157,7 @@
 			line-height: 23px;
 			padding: 40px 0 80px;
 			@include m.pc {
-			padding: 40px 60px 80px 0;
+			padding: 40px 15% 80px 0;
 			}
 		}
 	}

@@ -9,36 +9,47 @@ $pc:1024px;/*PCサイズ */
 
 //H2見出し用
 @mixin h2-title{
-	 color:white;
-	font-size:20px;
-	letter-spacing: 0.1em;
-	font-weight: bold;
-	line-height: 1.5;
+  position:relative;
+  text-align: center;
 }
 //H2見出しタグ囲い
 @mixin h2-titleWrap{
-	position:relative;
-	padding-top:60px;
-	display:flex;
-	justify-content: center;
-	flex-direction: row-reverse;
+  padding-top: 60px;
 }
+@mixin h2-titleWrap_pc{
+  padding-top:100 px;
+}
+
 //H2見出しタグの擬似要素_下の白色のバー
 @mixin underbar{
-	position:absolute;
-	width:40px;
-	height:1px;
-	content:"";
-	bottom:0;
-	right:50%;
-	transform:translateX(50%);
-	background-color: rgb(255, 255, 255);
-  }
-  //左側の画像
-@mixin h2-image{
-	display:block;
-	width:115px;
-	transform: translateY(-16px);
-  }
-
+  position:absolute;
+  width:40px;
+  height:1px;
+  content:"";
+  bottom:-32px;
+  right:50%;
+  transform:translateX(50%);
+  background-color: rgb(255, 255, 255);
+}
+//H2見出しタグの擬似要素_下の白色のバー(PC用)
+@mixin underbar_pc{
+  width:75px;
+  bottom:-60px;
+}
+//H2見出しタグの擬似要素_下の青色のバー
+@mixin underbar_b{
+  position:absolute;
+  width:40px;
+  height:1px;
+  content:"";
+  bottom:-32px;
+  right:50%;
+  transform:translateX(50%);
+  background-color: rgb(76, 111, 194);
+}
+//H2見出しタグの擬似要素_下の青色のバー(PC用)
+@mixin underbar_b_pc{
+  width:75px;
+  bottom:-60px;
+}
 

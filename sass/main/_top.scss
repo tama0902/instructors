@@ -13,11 +13,11 @@
 	//	padding: 80px 16px;
 	//}
 	.layout1 {
-		background: url('../../assets/img/top.png') no-repeat center center;
+		background: url('../../assets/img/top.jpg') no-repeat center center;
 		background-size: cover;
 		position: relative;
 		@include m.pc{
-			background: url('../../assets/img/top_pc.png') no-repeat center center;
+			background: url('../../assets/img/top_pc.jpg') no-repeat center center;
 			background-size: cover;
 			position: relative;
 		}

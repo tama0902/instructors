@@ -9,14 +9,13 @@
 	overflow: hidden;
 	@include m.pc{
 		.layout1,
-		.layout2,
 		.layout4,
 		.layout5 {
 			padding: 80px 18.75%;
 		}
 	}
 	.layout1 {
-		padding: 64px 0 96px;
+		padding: 0 0 96px;
 		@include m.pc{
 			padding: 120px 0 180px;
 		}
@@ -31,7 +30,8 @@
 		padding-left: 16px;
 		height: 146px;
 		@include m.pc{
-			padding-bottom: 0;
+			padding: 0 18.75%;
+			margin-bottom: 87px;
 		}
 	}
 	.layout4 {
@@ -51,45 +51,78 @@
 	}
 	.layout8 {
 		padding-left: 16px;
+		transform: skewY(23deg);
+		@include m.pc {
+		transform: skewY(15deg);
+		padding: 0 18.75% 8%;
+		}
 	}
 	.layout9 {
 		background-color: #FFF;
-		height: 95px;
+		height: 150px;
 	}
-	&__teacher {
-		background-color: #f0f0f0;
-		position: relative;
-		z-index: 0;
-		&::before {
-			content: "";
-			position: absolute;
-			top: 153px;
-			bottom: 143px;
-			left: 0;
-			right: 0;
-			transform: skewY(-23deg);
-			z-index: -1;
-			background-color: #324658;
-			@include m.pc {
-			transform: skewY(-15deg);
-			bottom: -60px;
-			top: 282px;
-			}
+	.layout10 {
+		background-color: #324658;
+		transform: skewY(-23deg);
+		@include m.pc {
+		transform: skewY(-15deg);
 		}
 		&::after {
 			content: "";
 			position: absolute;
-			top: 153px;
-			bottom: 143px;
+			top: 0;
+			bottom: 0;
 			left: 0;
 			right: 0;
+			background: url(../../assets/img/dotBox_intro.png) no-repeat;
+			transform: skewY(23deg);
 			z-index: -1;
-			background: url(../../assets/img/dotBox_intro.png);
 			@include m.pc {
-			bottom: -60px;
 			top: 282px;
+			left: 1000px;
+			transform: skewY(15deg);
+			background: url(../../assets/img/dotBox_intro_ash_pc.png) no-repeat;
 			}
 		}
+
+	}
+  &__titleWrap{
+    @include m.h2-titleWrap;
+    @include m.pc{
+      @include m.h2-titleWrap_pc;
+    }
+  }
+
+  &__title{
+    @include m.h2-title;
+  }
+  &__title::before{
+    @include m.underbar_b;
+    @include m.pc{
+      @include m.underbar_b_pc;
+    }
+  }
+	
+	&__teacher {
+		background-color: #f0f0f0;
+		position: relative;
+		z-index: 0;
+		//&::before {
+		//	content: "";
+		//	position: absolute;
+		//	top: 153px;
+		//	bottom: 143px;
+		//	left: 0;
+		//	right: 0;
+		//	transform: skewY(-23deg);
+		//	z-index: -1;
+		//	background-color: #324658;
+		//	@include m.pc {
+		//	transform: skewY(-15deg);
+		//	bottom: -60px;
+		//	top: 282px;
+		//	}
+		//}
 	}
 	&__name {
 		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
@@ -250,9 +283,8 @@
 		} 
 	}
 	&__content {
-		background-color: #f0f0f0;
 		position: relative;
-		z-index: -1;
+		z-index: 1;
 		display: flex;
 		flex-flow: column;
 		@include m.pc {
@@ -264,7 +296,7 @@
 			content: "";
 			position: absolute;
 			top: 360px;
-			bottom: -384px;
+			bottom: -100px;
 			left: 0;
 			right: 0;
 			transform: skewY(-23deg);
@@ -276,6 +308,21 @@
 			transform: skewY(-15deg);
 			bottom: -300px;
 			top: 282px;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 360px;
+			bottom: -100px;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			background:url(../../assets/img/dotBox_content.png) no-repeat;
+			@include m.pc {
+			left: 200px;
+			top: 450px;
+			background:url(../../assets/img/dotBox_content_pc.png) no-repeat;
 			}
 		}
 		@include m.pc{
