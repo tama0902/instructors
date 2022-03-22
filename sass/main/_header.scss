@@ -1,0 +1,135 @@
+@charset "UTF-8";
+//mixin用
+@use '../foundation/mixin' as m;
+
+main {
+	padding-top: 66px;
+	@include m.pc{
+		padding-top: 105px;
+	}
+}
+
+/*====================
+  header
+====================*/
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100;
+	@include m.pc{
+		display: flex;
+		padding: 16px 8.3%;
+		background-color: #fff;
+	}
+	&__bar {
+		background-color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 16px;
+		@include m.pc{
+			display: flex;
+		}
+	}
+}
+
+
+/*====================
+  menuButton
+====================*/
+.menuButton {
+	@include m.pc{
+		display: none;
+	}
+	&__inner {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--bar {
+			position: relative;
+			width: 32px;
+			height: 2px;
+			background-color: #446fc8;
+			transition: .4s;
+			&::before, &::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #446fc8;
+				transition: .4s;
+			}
+			&::before {
+				top: -8px;
+			}
+			&::after {
+				top: 8px;
+			}
+
+		}
+	}
+	&__text {
+		font-size: 11px;
+		margin-top: -10px;
+	}
+}
+#menu:checked ~ .header__bar .menuButton__inner--bar {
+	background: transparent;
+	transform: rotate(180deg);
+	&::before {
+		transform: rotate(45deg);
+		top: 0;
+	}
+	&::after {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+	
+}
+/*====================
+  menu
+====================*/
+#menu {
+	display: none;
+	&:checked ~ .menu {
+		right: 0;
+	}
+}
+.menu {
+	position: fixed;
+	top: 60px;
+	right: -100%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, .95);
+		transition: .6s;
+	@include m.pc{
+		position: static;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__wrapper {
+		@include m.pc{
+			display: flex;
+		}
+	}
+	&__link {
+		color: #000;
+		display: block;
+		height: 72px;
+		line-height: 72px;
+		display: flex;
+		justify-content: center;
+		@include m.pc{
+			width: auto;
+			margin-right: 48px;
+			text-align: center;
+		}
+	}
+}

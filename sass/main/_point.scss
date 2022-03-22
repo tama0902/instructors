@@ -14,13 +14,6 @@
 		top: 100px;
 		right: -55px;
 	}
-	//.layout1,
-	//.layout2,
-	//.layout3,
-	//.layout4,
-	//.layout5 {
-		//padding: 80px 16px;
-	//}
 	.layout1 {
 		padding-top: 0;
 		@include m.pc {
@@ -37,7 +30,7 @@
 		position: relative;
 		padding: 0 10.6%;
 		@include m.pc {
-		padding: 0;
+		padding-bottom: 128px;
 		}
 	}
   &__titleWrap{
@@ -65,7 +58,7 @@
 			text-align: left;
 			display: inline-block;
 			@include m.pc {
-				padding: 80px 128px 24px;
+				padding: 32px 128px 80px;
 			}
 		}
 	}

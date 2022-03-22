@@ -16,6 +16,7 @@
     }
   }
   &__imageWrap{
+    margin-top: 96px;
     order:1;
     @include m.pc{
       margin-top: 208px;
@@ -35,15 +36,18 @@
     background-color: #fff;
     margin:0 4.2%;
     padding:28px;
-	margin-top: -32px;
+    margin-bottom: 112px;
+    transform: translateY(-35px);
     @include m.pc{
       margin: 0;
       margin-right:-100px;
       margin-top: 400px;
+      margin-bottom: 134px;
       position:relative;
       width:1000px;
       height:600px;
       background: rgba(255,255,255,0.54);
+      transform: translateY(0px);
     }
 
     //縦並びの指定

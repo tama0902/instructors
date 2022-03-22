@@ -2,18 +2,23 @@
 //mixin用
 @use '../foundation/mixin' as m;
 
-.conversionButton{
-  position:relative;
-  display:block;
-  text-align: center;
+
+.conversionButtonBg{
   width:100%;
-  padding:28px;
-  color:white;
   background: rgb(46,182,197);
   background: linear-gradient(270deg, rgba(46,182,197,1) 0%, rgba(58,97,189,1) 100%);
+  text-align: center; 
   @include m.pc{
     max-width:673px;
-    padding:62px;
+  }
+}
+.conversionButton{
+  padding: 28px 0;
+  position:relative;
+  display:inline-block;
+  color:white;
+  @include m.pc{
+    padding: 60px 0;
     font-size:28px ;
   }
 }
@@ -28,19 +33,21 @@
 .conversionButton::before{
   content:"";
   position:absolute;
-  width:40px;
-  height:2px;
-  top:55%;
-  right:8%;
-  background-color: #fff;
+  width:30px; 
+  height:8px;
+  top:45%;
+  right:0px;
+  transform: translateX(150%);
+  background-image: url('../../assets/img/arrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  // アニメーション
+  transition: all 0.3s ease-in-out;
+  @include m.pc{
+    width:60px;
+    height:16px;
+  }
 }
-.conversionButton::after{
-  content:"";
-  position:absolute;
-  width:14px;
-  height:2px;
-  top:51.5%;
-  transform:rotate(35deg);
-  right:8%;
-  background-color: #fff;
+.conversionButton:hover::before{
+  right:-8px;
 }

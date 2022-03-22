@@ -88,6 +88,155 @@
   }
 }
 
+main {
+  padding-top: 66px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    /*  1024pxより大きい時 */
+    padding-top: 105px;
+  }
+}
+
+/*====================
+  header
+====================*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    /*  1024pxより大きい時 */
+    display: flex;
+    padding: 16px 8.3%;
+    background-color: #fff;
+  }
+}
+.header__bar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+@media screen and (min-width: 1024px) {
+  .header__bar {
+    /*  1024pxより大きい時 */
+    display: flex;
+  }
+}
+
+/*====================
+  menuButton
+====================*/
+@media screen and (min-width: 1024px) {
+  .menuButton {
+    /*  1024pxより大きい時 */
+    display: none;
+  }
+}
+.menuButton__inner {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuButton__inner--bar {
+  position: relative;
+  width: 32px;
+  height: 2px;
+  background-color: #446fc8;
+  transition: 0.4s;
+}
+.menuButton__inner--bar::before, .menuButton__inner--bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #446fc8;
+  transition: 0.4s;
+}
+.menuButton__inner--bar::before {
+  top: -8px;
+}
+.menuButton__inner--bar::after {
+  top: 8px;
+}
+.menuButton__text {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+#menu:checked ~ .header__bar .menuButton__inner--bar {
+  background: transparent;
+  transform: rotate(180deg);
+}
+#menu:checked ~ .header__bar .menuButton__inner--bar::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+#menu:checked ~ .header__bar .menuButton__inner--bar::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/*====================
+  menu
+====================*/
+#menu {
+  display: none;
+}
+#menu:checked ~ .menu {
+  right: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  transition: 0.6s;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    /*  1024pxより大きい時 */
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__wrapper {
+    /*  1024pxより大きい時 */
+    display: flex;
+  }
+}
+.menu__link {
+  color: #000;
+  display: block;
+  height: 72px;
+  line-height: 72px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .menu__link {
+    /*  1024pxより大きい時 */
+    width: auto;
+    margin-right: 48px;
+    text-align: center;
+  }
+}
+
 .top .layout1 {
   background: url("../../assets/img/top.jpg") no-repeat center center;
   background-size: cover;
@@ -121,6 +270,39 @@
 }
 .top__flex--button {
   width: 42%;
+  position: relative;
+}
+.top__flex--button::after {
+  content: url(../../assets/img/scrollArrow.png);
+  position: absolute;
+  top: 60%;
+  left: 57px;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+@media screen and (min-width: 1024px) {
+  .top__flex--button::after {
+    /*  1024pxより大きい時 */
+    content: url(../../assets/img/scrollArrow.png);
+    top: 60%;
+    left: 130px;
+  }
+}
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 60%;
+    opacity: 0;
+  }
+  30% {
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 70%;
+    opacity: 0;
+  }
 }
 .top__flex--text {
   width: 60%;
@@ -261,7 +443,8 @@
 }
 .intro .layout9 {
   background-color: #FFF;
-  height: 150px;
+  height: 128px;
+  transform: skewY(0deg);
 }
 .intro .layout10 {
   background-color: #324658;
@@ -347,11 +530,26 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 100px;
   font-weight: 900;
-  color: #324658;
-  opacity: 0.1;
+  color: rgba(50, 69, 104, 0.1);
+  opacity: 0;
   overflow: hidden;
   padding: 45px 0;
   margin-top: -30px;
+}
+.intro__name .slidein .is-animated {
+  animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%, 100% {
+    opacity: 1;
+  }
 }
 .intro__ash {
   position: relative;
@@ -671,7 +869,7 @@
 @media screen and (min-width: 1024px) {
   .point .layout3 {
     /*  1024pxより大きい時 */
-    padding: 0;
+    padding-bottom: 128px;
   }
 }
 .point__titleWrap {
@@ -717,7 +915,7 @@
 @media screen and (min-width: 1024px) {
   .point__content--txt {
     /*  1024pxより大きい時 */
-    padding: 80px 128px 24px;
+    padding: 32px 128px 80px;
   }
 }
 .point__image--r1 {
@@ -1211,6 +1409,7 @@
     width: 32%;
     margin: 16px auto 0;
     padding: 10px;
+    cursor: pointer;
   }
 }
 .questionLists__item:nth-of-type(n+2) {
@@ -1238,6 +1437,11 @@
   bottom: 24px;
   right: 24px;
   pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.questionList__title:hover::after {
+  right: 8px;
 }
 
 .questionModal {
@@ -1489,6 +1693,7 @@
   }
 }
 .conversion__imageWrap {
+  margin-top: 96px;
   order: 1;
 }
 @media screen and (min-width: 1024px) {
@@ -1514,7 +1719,8 @@
   background-color: #fff;
   margin: 0 4.2%;
   padding: 28px;
-  margin-top: -32px;
+  margin-bottom: 112px;
+  transform: translateY(-35px);
   display: flex;
   flex-direction: column;
 }
@@ -1524,10 +1730,12 @@
     margin: 0;
     margin-right: -100px;
     margin-top: 400px;
+    margin-bottom: 134px;
     position: relative;
     width: 1000px;
     height: 600px;
     background: rgba(255, 255, 255, 0.54);
+    transform: translateY(0px);
   }
 }
 .conversion__textWrap {
@@ -1675,6 +1883,7 @@
 .Modal-Inner-Card-Wrapper-Slide-Item {
   padding: 18px;
   border-radius: 16px;
+  margin-top: 90px;
   width: 90%;
   height: 90vh;
   background: #ffffff;
@@ -1824,21 +2033,29 @@
   }
 }
 
-.conversionButton {
-  position: relative;
-  display: block;
-  text-align: center;
+.conversionButtonBg {
   width: 100%;
-  padding: 28px;
-  color: white;
   background: #2eb6c5;
   background: linear-gradient(270deg, #2eb6c5 0%, #3a61bd 100%);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .conversionButtonBg {
+    /*  1024pxより大きい時 */
+    max-width: 673px;
+  }
+}
+
+.conversionButton {
+  padding: 28px 0;
+  position: relative;
+  display: inline-block;
+  color: white;
 }
 @media screen and (min-width: 1024px) {
   .conversionButton {
     /*  1024pxより大きい時 */
-    max-width: 673px;
-    padding: 62px;
+    padding: 60px 0;
     font-size: 28px;
   }
 }
@@ -1858,22 +2075,26 @@
 .conversionButton::before {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 2px;
-  top: 55%;
-  right: 8%;
-  background-color: #fff;
+  width: 30px;
+  height: 8px;
+  top: 45%;
+  right: 0px;
+  transform: translateX(150%);
+  background-image: url("../../assets/img/arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .conversionButton::before {
+    /*  1024pxより大きい時 */
+    width: 60px;
+    height: 16px;
+  }
 }
 
-.conversionButton::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  top: 51.5%;
-  transform: rotate(35deg);
-  right: 8%;
-  background-color: #fff;
+.conversionButton:hover::before {
+  right: -8px;
 }
 
 .studentsVoice__title {

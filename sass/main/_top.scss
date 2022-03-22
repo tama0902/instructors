@@ -5,13 +5,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 .top {
 
-	//.layout1,
-	//.layout2,
-	//.layout3,
-	//.layout4,
-	//.layout5 {
-	//	padding: 80px 16px;
-	//}
 	.layout1 {
 		background: url('../../assets/img/top.jpg') no-repeat center center;
 		background-size: cover;
@@ -38,6 +31,36 @@
 		}
 		&--button {
 			width: 42%;
+			position: relative;
+			&::after {
+				content: url(../../assets/img/scrollArrow.png);
+				position: absolute;
+				top: 60%;
+				left: 57px;
+				animation: pathmove 1.4s ease-in-out infinite;
+				opacity: 0;
+				@include m.pc{
+					content: url(../../assets/img/scrollArrow.png);
+					top: 60%;
+					left: 130px;
+				}
+			}
+			@keyframes pathmove {
+				0% {
+				  height: 0;
+				  top: 60%;
+				  opacity: 0;
+				}
+				30% {
+				  height: 50px;
+				  opacity: 1;
+				}
+				100% {
+				  height: 0;
+				  top: 70%;
+				  opacity: 0;
+				}
+			  }
 		}
 		&--text {
 			width: 60%;
