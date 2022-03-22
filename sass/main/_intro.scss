@@ -17,7 +17,7 @@
 	.layout1 {
 		padding: 0 0 96px;
 		@include m.pc{
-			padding: 120px 0 180px;
+			padding-bottom: 180px;
 		}
 	}
 	.layout2 {
@@ -141,25 +141,9 @@
 			font-size: 100px;
 			font-weight: 900;
 			color: rgba(50, 69, 104, 0.1);
-			opacity: 0;
 			overflow: hidden;
 			padding:45px 0;
 			margin-top: -30px;
-		}
-		.slidein .is-animated {
-			animation: slideIn 1s forwards;
-			@keyframes slideIn {
-				0% {
-					transform: translateX(200%);
-					opacity: 0;
-				}
-				100% {
-					transform: translateX(0);
-				}
-				40%, 100% {
-					opacity: 1;
-				}
-			}
 		}
 	}
 	&__ash {

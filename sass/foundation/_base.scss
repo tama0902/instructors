@@ -6,6 +6,7 @@
 	font-family: v.$base_font;
 	font-size: v.$base_size;
 	line-height: v.$base_l-height;
+	overflow: hidden;
 	.not-pc-br{
 	  display:none;
 	}

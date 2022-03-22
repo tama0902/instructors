@@ -5,7 +5,7 @@
 main {
 	padding-top: 66px;
 	@include m.pc{
-		padding-top: 105px;
+		padding-top: 90px;
 	}
 }
 
@@ -21,7 +21,7 @@ main {
 	z-index: 100;
 	@include m.pc{
 		display: flex;
-		padding: 16px 8.3%;
+		padding: 8px 8.3%;
 		background-color: #fff;
 	}
 	&__bar {
@@ -130,6 +130,9 @@ main {
 			width: auto;
 			margin-right: 48px;
 			text-align: center;
+		}
+		@media screen and (min-width:1024px) and ( max-width:1270px) {
+			margin-right: 20px;
 		}
 	}
 }
