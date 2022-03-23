@@ -1,69 +1,65 @@
 function fadeAnime(){
 
-	$('.fadeRightTrigger').each(function(){ //fadeUpTriggerというクラス名が
-	  var elemPos = $(this).offset().top-50;//要素より、50px上の
+	$('.fadeRightTrigger').each(function(){ 
+	  var elemPos = $(this).offset().top-50;
 	  var scroll = $(window).scrollTop();
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
-		  $(this).addClass('fadeRight');// 画面内に入ったらfadeUpというクラス名を追記
+		  $(this).addClass('fadeRight');
 		  } else {
-		  $(this).removeClass('fadeRight');// 画面外に出たらfadeUpというクラス名を外す
+		  $(this).removeClass('fadeRight');
 		  }
 	});
-	$('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
-	  var elemPos = $(this).offset().top-50;//要素より、50px上の
+	$('.fadeUpTrigger').each(function(){ 
+	  var elemPos = $(this).offset().top-50;
 	  var scroll = $(window).scrollTop();
 	  var windowHeight = $(window).height();
 	  if (scroll >= elemPos - windowHeight){
-	  $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+	  $(this).addClass('fadeUp');
 	  }else{
-	  $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+	  $(this).removeClass('fadeUp');
 	  }
 	  });
   }
   
 	$(window).scroll(function (){
-	  fadeAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面をスクロールをしたら動かしたい場合の記述
+	  fadeAnime();
+	});
   
 	$(window).on('load', function(){
-	  fadeAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+	  fadeAnime();
+	});
 
 	function BgFadeAnime(){
 
-		// 背景色が伸びて出現（左から右）
-	  $('.bgLRextendTrigger').each(function(){ //bgLRextendTriggerというクラス名が
-		var elemPos = $(this).offset().top-50;//要素より、50px上の
+	  $('.bgLRextendTrigger').each(function(){ 
+		var elemPos = $(this).offset().top-50;
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-		  $(this).addClass('bgLRextend');// 画面内に入ったらbgLRextendというクラス名を追記
+		  $(this).addClass('bgLRextend');
 		}else{
-		  $(this).removeClass('bgLRextend');// 画面外に出たらbgLRextendというクラス名を外す
+		  $(this).removeClass('bgLRextend');
 		}
 	  }); 
 	
-	   // 文字列を囲う子要素
-	  $('.bgappearTrigger').each(function(){ //bgappearTriggerというクラス名が
-		var elemPos = $(this).offset().top-50;//要素より、50px上の
+	  $('.bgappearTrigger').each(function(){ 
+		var elemPos = $(this).offset().top-50;
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll >= elemPos - windowHeight){
-		  $(this).addClass('bgappear');// 画面内に入ったらbgappearというクラス名を追記
+		  $(this).addClass('bgappear');
 		}else{
-		  $(this).removeClass('bgappear');// 画面外に出たらbgappearというクラス名を外す
+		  $(this).removeClass('bgappear');
 		}
 	  });   
 	}
 	
-	// 画面をスクロールをしたら動かしたい場合の記述
 	  $(window).scroll(function (){
-		BgFadeAnime();/* アニメーション用の関数を呼ぶ*/
-	  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+		BgFadeAnime();
+	  });
 	
-	// 画面が読み込まれたらすぐに動かしたい場合の記述
 	  $(window).on('load', function(){
-		BgFadeAnime();/* アニメーション用の関数を呼ぶ*/
-	  });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+		BgFadeAnime();
+	  });
   

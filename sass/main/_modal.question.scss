@@ -60,7 +60,7 @@
   &-Inner{
     &-Btn{
       position: absolute;
-      top: 24px;
+      top: 117px;
       right: -10px;
       width: 70px;
       color: #fff;
@@ -83,11 +83,11 @@
           width:100% !important;
           height:auto;
           &-Item{
-            padding:18px;
+            padding:48px 18px;
             border-radius: 16px;
-			margin-top: 90px;
+			margin-top: 96px;
             width :90%;
-            height: 90vh;
+            height: 80vh;
             background: #ffffff;
             @include m.pc{
               padding:36px;

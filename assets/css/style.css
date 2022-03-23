@@ -1076,7 +1076,7 @@ main {
 .point__list--title {
   position: relative;
   font-family: futura-pt-bold, sans-serif;
-  color: #141d83;
+  color: #001429;
   font-size: 18px;
   line-height: 26px;
   display: flex;
@@ -1112,7 +1112,7 @@ main {
   height: 72px;
 }
 .point__list--txt {
-  color: #141d83;
+  color: #001429;
   font-size: 15px;
   line-height: 23px;
   padding: 40px 0 80px;
@@ -1510,7 +1510,7 @@ main {
 }
 
 .questionList__title {
-  color: #446fc8;
+  color: #001429;
   min-height: 120px;
   max-width: 560px;
   list-style: none;
@@ -1827,7 +1827,6 @@ main {
     position: relative;
     width: 1000px;
     height: 600px;
-    background: rgba(255, 255, 255, 0.54);
     transform: translateY(0px);
   }
 }
@@ -1946,7 +1945,7 @@ main {
 
 .Modal-Inner-Btn {
   position: absolute;
-  top: 24px;
+  top: 117px;
   right: -10px;
   width: 70px;
   color: #fff;
@@ -1975,11 +1974,11 @@ main {
   height: auto;
 }
 .Modal-Inner-Card-Wrapper-Slide-Item {
-  padding: 18px;
+  padding: 48px 18px;
   border-radius: 16px;
-  margin-top: 90px;
+  margin-top: 96px;
   width: 90%;
-  height: 90vh;
+  height: 80vh;
   background: #ffffff;
 }
 @media screen and (min-width: 1024px) {
