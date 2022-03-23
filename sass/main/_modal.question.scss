@@ -60,12 +60,15 @@
   &-Inner{
     &-Btn{
       position: absolute;
-      top: 117px;
+      top: 64px;
       right: -10px;
       width: 70px;
       color: #fff;
       z-index: 10;
       cursor: pointer;
+	  @include m.pc{
+      top: 114px;
+	}
       img{
         display:block;
         width:16px;
@@ -83,11 +86,11 @@
           width:100% !important;
           height:auto;
           &-Item{
-            padding:48px 18px;
+            padding:18px;
             border-radius: 16px;
-			margin-top: 96px;
+			margin-top: 50px;
             width :90%;
-            height: 80vh;
+            height: 85vh;
             background: #ffffff;
             @include m.pc{
               padding:36px;
