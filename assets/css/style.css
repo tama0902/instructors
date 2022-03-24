@@ -142,6 +142,16 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .bgextend {
+    /*  1024pxより大きい時 */
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 @keyframes bgextendAnimeBase {
@@ -204,9 +214,6 @@
   opacity: 0;
 }
 
-main {
-  padding-top: 66px;
-}
 @media screen and (min-width: 1024px) {
   main {
     /*  1024pxより大きい時 */
@@ -381,7 +388,7 @@ main {
 .top__flex {
   display: flex;
   align-items: center;
-  padding: 158% 35px 10%;
+  padding: 140% 35px 10%;
 }
 @media screen and (min-width: 1024px) {
   .top__flex {
@@ -404,7 +411,7 @@ main {
 @media screen and (min-width: 1024px) {
   .top__flex--button::after {
     /*  1024pxより大きい時 */
-    content: url(../../assets/img/scrollArrow_pc.png);
+    content: url(../../assets/svg/scrollArrow_pc.svg);
     top: 60%;
     left: 130px;
   }
@@ -547,7 +554,7 @@ main {
 @media screen and (min-width: 1024px) {
   .intro .layout5 {
     /*  1024pxより大きい時 */
-    padding-top: 320px;
+    padding-top: 145px;
     padding-bottom: 280px;
   }
 }
@@ -696,7 +703,7 @@ main {
   font-size: 20px;
   color: #446fc8;
   bottom: -44px;
-  left: 15px;
+  left: 5px;
 }
 @media screen and (min-width: 1024px) {
   .intro__ash--first::before {
@@ -745,7 +752,7 @@ main {
   font-size: 20px;
   color: #446fc8;
   bottom: -44px;
-  left: 15px;
+  left: 2px;
 }
 @media screen and (min-width: 1024px) {
   .intro__og--first::before {
@@ -899,7 +906,7 @@ main {
     /*  1024pxより大きい時 */
     transform: skewY(-15deg);
     bottom: -300px;
-    top: 282px;
+    top: 140px;
   }
 }
 .intro__content::after {
@@ -915,8 +922,8 @@ main {
 @media screen and (min-width: 1024px) {
   .intro__content::after {
     /*  1024pxより大きい時 */
-    left: 200px;
-    top: 450px;
+    left: 230px;
+    top: 200px;
     background: url(../../assets/img/dotBox_content_pc.png) no-repeat;
   }
 }
@@ -1086,7 +1093,7 @@ main {
   content: "";
   width: 4.8em;
   height: 4.8em;
-  background: url(../img/point_number.png) no-repeat;
+  background: url(../../assets/svg/point_number.svg) no-repeat;
   background-size: contain;
   display: inline-block;
   margin-top: -30px;
@@ -1425,16 +1432,8 @@ main {
 
 .question {
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #44bed5 !important;
   position: relative;
   overflow: hidden;
-  background: url("../../assets/img/dotBox_question.png");
-}
-@media screen and (min-width: 1024px) {
-  .question {
-    /*  1024pxより大きい時 */
-    background: url("../../assets/img/dotBox_question_pc.png");
-  }
 }
 .question__titleWrap {
   padding-top: 60px;
@@ -1702,9 +1701,11 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../assets/img/dotBox_question.png");
+  background-image: radial-gradient(rgba(0, 0, 0, 0.36) 30%, transparent 31%);
   background-color: rgba(17, 182, 214, 0.5);
-  z-index: 2;
+  background-size: 4px 4px;
+  background-position: 0 0;
+  z-index: 1;
 }
 
 .voice {

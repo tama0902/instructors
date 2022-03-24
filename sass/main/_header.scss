@@ -3,7 +3,6 @@
 @use '../foundation/mixin' as m;
 
 main {
-	padding-top: 66px;
 	@include m.pc{
 		padding-top: 90px;
 	}

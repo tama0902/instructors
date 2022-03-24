@@ -54,6 +54,13 @@
     position: relative;
     overflow: hidden;
     opacity: 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+	@include m.pc{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }
 @keyframes bgextendAnimeBase{
 	from {

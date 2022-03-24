@@ -45,7 +45,7 @@
 	.layout5 {
 		padding-bottom: 30px;
 		@include m.pc{
-			padding-top: 320px;
+			padding-top: 145px;
 			padding-bottom: 280px;
 		}
 	}
@@ -162,7 +162,7 @@
 			font-size: 20px;
 			color: #446fc8;
 			bottom: -44px;
-			left: 15px;
+			left: 5px;
 			@include m.pc {
 				font-size: 27px;
 				bottom: -55px;
@@ -186,7 +186,7 @@
 			font-size: 20px;
 			color: #446fc8;
 			bottom: -44px;
-			left: 15px;
+			left: 2px;
 			@include m.pc {
 				font-size: 27px;
 				bottom: -55px;
@@ -307,7 +307,7 @@
 			@include m.pc {
 			transform: skewY(-15deg);
 			bottom: -300px;
-			top: 282px;
+			top: 140px;
 			}
 		}
 		&::after {
@@ -320,8 +320,8 @@
 			z-index: -1;
 			background:url(../../assets/img/dotBox_content.png) no-repeat;
 			@include m.pc {
-			left: 200px;
-			top: 450px;
+			left: 230px;
+			top: 200px;
 			background:url(../../assets/img/dotBox_content_pc.png) no-repeat;
 			}
 		}

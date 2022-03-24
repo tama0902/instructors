@@ -25,7 +25,7 @@
 	&__flex {
 		display: flex;
 		align-items: center;
-		padding: 158% 35px 10%;
+		padding: 140% 35px 10%;
 		@include m.pc{
 			padding: 30% 64px 10%;
 		}
@@ -40,7 +40,7 @@
 				animation: pathmove 1.4s ease-in-out infinite;
 				opacity: 0;
 				@include m.pc{
-					content: url(../../assets/img/scrollArrow_pc.png);
+					content: url(../../assets/svg/scrollArrow_pc.svg);
 					top: 60%;
 					left: 130px;
 				}
