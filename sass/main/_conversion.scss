@@ -5,7 +5,6 @@
 .conversion{
   background-color: #EDEDED;
   @include m.pc{
-    padding-bottom:150px ;
     overflow: hidden;
   }
   &__inner{
@@ -36,13 +35,13 @@
     background-color: #fff;
     margin:0 4.2%;
     padding:28px;
-    margin-bottom: 112px;
+    margin-bottom: 80px;
     transform: translateY(-35px);
     @include m.pc{
       margin: 0;
       margin-right:-100px;
       margin-top: 400px;
-      margin-bottom: 134px;
+      margin-bottom: 146px;
       position:relative;
       width:1000px;
       height:600px;

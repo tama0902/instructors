@@ -15,9 +15,9 @@
 		}
 	}
 	.layout1 {
-		padding: 0 0 96px;
+		padding: 0 0 112px;
 		@include m.pc{
-			padding-bottom: 180px;
+			padding-bottom: 148px;
 		}
 	}
 	.layout2 {
@@ -43,10 +43,11 @@
 		}
 	}
 	.layout5 {
-		padding-bottom: 30px;
+		padding-bottom: 80px;
 		@include m.pc{
-			padding-top: 145px;
-			padding-bottom: 280px;
+			margin-top: -114px;
+			padding-top: 285px;
+			padding-bottom: 120px;
 		}
 	}
 	.layout8 {
@@ -79,7 +80,7 @@
 			transform: skewY(23deg);
 			z-index: -1;
 			@include m.pc {
-			top: 282px;
+			top: 430px;
 			left: 1000px;
 			transform: skewY(15deg);
 			background: url(../../assets/img/dotBox_intro_ash_pc.png) no-repeat;
@@ -126,8 +127,8 @@
 		//}
 	}
 	&__name {
-		font-family: "游明朝体", 'Yu Mincho', 'YuMincho', 'Noto Serif JP', serif;
-		font-weight: 900;
+		font-family: 'Noto Serif JP', serif;
+		font-weight: 500;
 		font-size: 90px;
 		color: #324658;
 		height: 90px;
@@ -149,9 +150,9 @@
 	&__ash {
 		position: relative;
 		padding-top: 35px;
-		span:nth-of-type(1){color:#446fc8}
+		span:nth-of-type(1){color:#437BB2}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 22px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
 	}
 	&__ash--first {
 		position: relative;
@@ -161,21 +162,21 @@
 			font-family: v.$base_font;
 			font-size: 20px;
 			color: #446fc8;
-			bottom: -44px;
+			bottom: -48px;
 			left: 5px;
 			@include m.pc {
 				font-size: 27px;
-				bottom: -55px;
+				bottom: -66px;
 			}
 		}
 	}
 
 	&__og {
 		position: relative;
-		padding-top: 35px;
-		span:nth-of-type(1){color:#446fc8}
+		padding-top: 20px;
+		span:nth-of-type(1){color: #437bb2;}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 15px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 4px; left: 185px; @include m.pc {font-size: 74px; left: 261px;}}
 	}
 	&__og--first {
 		position: relative;
@@ -185,11 +186,11 @@
 			font-family: v.$base_font;
 			font-size: 20px;
 			color: #446fc8;
-			bottom: -44px;
-			left: 2px;
+			bottom: -51px;
+			left: 1px;
 			@include m.pc {
 				font-size: 27px;
-				bottom: -55px;
+				bottom: -72px;
 			}
 		}
 	}
@@ -217,6 +218,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+			position: relative;
 			@include m.pc{
 			}
 		}
@@ -228,16 +230,13 @@
 			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 			text-align: end;
 			padding-right: 32px;
-			span {
-				font-size: 18px;
-				font-weight: 500;
-				margin-left: 8px;
-			}
+			&:nth-of-type(2){margin-top: -27px;}
 			@include m.pc{
 			order: 1;
 			margin-top: -200px;
 			font-size: 50px;
 			line-height: 70px;
+			&:nth-of-type(2){margin-top: -46px;}
 			}
 		}
 		&--txt {
@@ -307,7 +306,7 @@
 			@include m.pc {
 			transform: skewY(-15deg);
 			bottom: -300px;
-			top: 140px;
+			top: 287px;
 			}
 		}
 		&::after {
@@ -321,7 +320,7 @@
 			background:url(../../assets/img/dotBox_content.png) no-repeat;
 			@include m.pc {
 			left: 230px;
-			top: 200px;
+			top: 420px;
 			background:url(../../assets/img/dotBox_content_pc.png) no-repeat;
 			}
 		}
@@ -332,7 +331,9 @@
 		}
 		&--feature {
 			img {
+				padding-right: 13px;
 				@include m.pc{
+					padding-right: 0;
 				}
 			}
 		}

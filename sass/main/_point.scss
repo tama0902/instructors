@@ -21,7 +21,7 @@
 		}
 	}
 	.layout2 {
-		padding: 88px 24px 0;
+		padding: 112px 24px 0;
 		@include m.pc {
 		padding: 0 18.73%;
 		}
@@ -30,7 +30,7 @@
 		position: relative;
 		padding: 0 10.6%;
 		@include m.pc {
-		padding-bottom: 128px;
+		padding-bottom: 56px;
 		}
 	}
   &__titleWrap{
@@ -58,7 +58,7 @@
 			text-align: left;
 			display: inline-block;
 			@include m.pc {
-				padding: 32px 128px 80px;
+				padding: 60px 128px 80px;
 			}
 		}
 	}
@@ -111,6 +111,7 @@
 			font-family: futura-pt-bold,sans-serif;
 			color: #001429;
 			font-size: 18px;
+			font-weight: 700;
 			line-height: 26px;
 			display: flex;
 			counter-increment: number;
@@ -135,8 +136,8 @@
 				border-radius: 50%;
 				text-align: center;
 				line-height: 72px;
-				background: linear-gradient(50deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
-				background: -webkit-linear-gradient(40deg, #9300F0 0%, #413DF1 52%, #00E8FA 100%);
+				background: linear-gradient(50deg, #9300F0 32%, #413DF1 50%, #00E8FA 65%);
+				background: -webkit-linear-gradient(50deg, #9300F0 32%, #413DF1 50%, #00E8FA 65%);
 				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;

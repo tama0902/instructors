@@ -3,12 +3,22 @@
 @use '../foundation/mixin' as m;
 
 .studentsVoice{
- // background-color: rgb(18, 94, 208);
   &__title{
     font-size: 15px;
     font-weight: 600;
     text-align: center;
     color:white;
+    position: relative;
+  }
+  &__title::before{
+    content:"";
+    position: absolute;
+    bottom:-16px;
+    left:50%;
+    transform: translateX(-50%);
+    width:40px;
+    height:2px;
+    background-color: white;
   }
   &__text{
     font-size:16px;
@@ -24,7 +34,7 @@
   max-width:343px;
   width:auto;
   margin: 0 auto;
-  margin-top:34px;
+  margin-top:38px;
   @include m.pc{
     max-width:445px;
   }
@@ -107,11 +117,46 @@
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
   content: '';
 }
+
+
 .studentsVoice__imageWrap{
   display:flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 8px;
 }
-
+.studentsVoice__icon{
+  display:block;
+  width:42px;
+  height:41px;
+  margin-right:8px;
+}
+.studentsVoice__rightSide{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+}
+.studentsVoice__userName{
+  font-size:16px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+}
+.studentsVoice__userNameTwitterWrap{
+  display:flex;
+}
+.studentsVoice__userId{
+  transform: translateY(-1px);
+  font-size:14px;
+  font-weight: 400;
+  line-height: 1;
+}
+.studentsVoice__twitter{
+  display:block;
+  width:16px;
+  height:13px;
+  margin-right: 6px;
+}
 .studentsVoice__image{
   display:block;
   width:50%;

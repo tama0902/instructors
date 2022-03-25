@@ -67,7 +67,8 @@
       z-index: 10;
       cursor: pointer;
 	  @include m.pc{
-      top: 114px;
+      top: 80px;
+      right: -26px;
 	}
       img{
         display:block;
@@ -125,7 +126,13 @@
   margin-top: -24px;
   z-index:1;
   position:absolute;
-  bottom:16px;
+}
+.swiper-button-prev--blue {
+  bottom:10px;
+
+}
+.swiper-button-next--blue {
+  bottom:10px;
 }
 
 /* ---------------------------- */

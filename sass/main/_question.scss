@@ -34,10 +34,12 @@
 		padding: 0;
 	}
 	.layout3 {
-		padding: 128px 24px;
-		
+		padding: 122px 24px 80px;
 		display: flex;
 		justify-content: center;
+		@include m.pc {
+			padding-bottom: 136px;
+		}
 	}
 }
 .questionLists {
