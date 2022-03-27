@@ -1,14 +1,36 @@
+//mixin用
+@use '../foundation/mixin' as m;
 .banner{
   background-color:#324658;
+  padding: 60px 32px 80px;
+	@include m.pc{
+		padding: 100px 160px 136px;
+	}
   &__title{
-    padding-top:70px ;
-    font-size:19px;
+	  width: 100%;
+    font-size:18px;
     color:#fff;
     text-align: center;
-  }
-  img{
-    display:block;
-    width:50%;
-    margin:40px auto 0;
+	&--list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@include m.pc{
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		li {
+			  margin-top: 40px;
+			@include m.pc{
+				width: 26%;
+		}
+	  img{
+		  width: 320px;
+		  height: 120px;
+		  text-align: center;
+		}
+	  }
+	}
   }
 }

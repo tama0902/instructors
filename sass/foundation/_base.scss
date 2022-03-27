@@ -8,7 +8,9 @@
 	line-height: v.$base_l-height;
 	overflow: hidden;
 	.not-pc-br{
-	  display:none;
+		@include m.pc {
+		  display:none;
+		}
 	}
 	.sp {
 		display: block;

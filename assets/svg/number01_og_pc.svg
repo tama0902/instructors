@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84.885" height="77.778" viewBox="0 0 84.885 77.778"><defs><filter id="a" x="0" y="0" width="84.885" height="77.778" filterUnits="userSpaceOnUse"><feOffset input="SourceAlpha"/><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-opacity="0.161"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/></filter></defs><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#a)"><path d="M-19.141-20.637l-2.867,2.449-2.15-2.449,2.21-15.528,2.867-2.508,2.09,2.508ZM-22.127.743l-2.867,2.508L-27.144.743l2.15-15.528,2.867-2.449,2.15,2.449ZM-3.912,3.67-6.719,6.178H-22.486l-2.15-2.508,2.867-2.508H-6.062ZM-.508.743-3.374,3.252-5.524.743l2.15-15.528,2.867-2.449,2.15,2.449ZM2.478-20.637-.388-18.189l-2.15-2.449,2.21-15.528,2.807-2.508,2.15,2.508ZM2.12-39.092-.747-36.583H-16.454l-2.15-2.508,2.867-2.508H-.03ZM25.113-20.637l-2.807,2.508-2.09-2.508,2.568-18.514L25.591-41.6l2.15,2.449Zm-4.36-10.511-2.986,2.568L15.8-30.85l.358-2.449,5.614-4.957Zm.956,34.878L18.9,6.178l-2.15-2.269L19.38-14.785l2.807-2.508,2.09,2.508Z" transform="translate(42.14 56.6)" fill="#fff"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84.885" height="77.778" viewBox="0 0 84.885 77.778">
+  <defs>
+    <filter id="パス_1711" x="0" y="0" width="84.885" height="77.778" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#パス_1711)">
+    <path id="パス_1711-2" data-name="パス 1711" d="M-19.141-20.637l-2.867,2.449-2.15-2.449,2.21-15.528,2.867-2.508,2.09,2.508ZM-22.127.743l-2.867,2.508L-27.144.743l2.15-15.528,2.867-2.449,2.15,2.449ZM-3.912,3.67-6.719,6.178H-22.486l-2.15-2.508,2.867-2.508H-6.062ZM-.508.743-3.374,3.252-5.524.743l2.15-15.528,2.867-2.449,2.15,2.449ZM2.478-20.637-.388-18.189l-2.15-2.449,2.21-15.528,2.807-2.508,2.15,2.508ZM2.12-39.092-.747-36.583H-16.454l-2.15-2.508,2.867-2.508H-.03ZM25.113-20.637l-2.807,2.508-2.09-2.508,2.568-18.514L25.591-41.6l2.15,2.449Zm-4.36-10.511-2.986,2.568L15.8-30.85l.358-2.449,5.614-4.957Zm.956,34.878L18.9,6.178l-2.15-2.269L19.38-14.785l2.807-2.508,2.09,2.508Z" transform="translate(42.14 56.6)" fill="#fff"/>
+  </g>
+</svg>

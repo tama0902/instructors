@@ -3,76 +3,177 @@
 
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 .top {
 
 	.layout1 {
 		background: url('../../assets/img/top.jpg') no-repeat center center;
 		background-size: cover;
 		position: relative;
+		height: calc(100vh);
+		@supports(-webkit-touch-callout: none){
+			/* iPhoneの表示のみ指定を上書き */
+			.layout1{
+			  height: -webkit-fill-available;
+			  }
+			}
 		@include m.pc{
 			background: url('../../assets/img/top_pc.jpg') no-repeat center center;
 			background-size: cover;
 			position: relative;
+			height: calc(100vh - 90px);
 		}
 	}
 	&__title {
 		text-align: center;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	&__flex {
-		display: flex;
-		align-items: center;
-		padding: 140% 35px 10%;
+		top: 60%;
+		left: 60%;
+		transform: translate(-60%, -60%);
 		@include m.pc{
-			padding: 30% 64px 10%;
+			top: 60%;
+			left: 50%;
+			transform: translate(-60%, -50%);
 		}
-		&--button {
-			width: 42%;
-			position: relative;
-			&::after {
-				content: url(../../assets/img/scrollArrow.png);
-				position: absolute;
-				top: 60%;
-				left: 57px;
-				animation: pathmove 1.4s ease-in-out infinite;
-				opacity: 0;
-				@include m.pc{
-					content: url(../../assets/svg/scrollArrow_pc.svg);
-					top: 60%;
-					left: 130px;
-				}
-			}
-			@keyframes pathmove {
-				0% {
-				  height: 0;
-				  top: 60%;
-				  opacity: 0;
-				}
-				30% {
-				  height: 50px;
-				  opacity: 1;
-				}
-				100% {
-				  height: 0;
-				  top: 70%;
-				  opacity: 0;
-				}
-			  }
+	}
+	&__text{
+		display:inline-block;
+		position: absolute;
+		bottom:43px;
+		left:164px;
+		color: #FFF;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.42;
+		@include m.pc{
+			left:25%;
+			bottom:45%;
+			font-size: 24px;
+			line-height: 40px;
+			margin-top: -25%;
+			margin-left: 37%;
 		}
-		&--text {
-			width: 65%;
-			color: #FFF;
-			font-size: 14px;
-			line-height: 20px;
-			@include m.pc{
-				font-size: 24px;
-				line-height: 40px;
-				margin-top: -25%;
-				margin-left: 37%;
-			}
+	}
+}
+	// &__flex {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	padding: 158% 35px 10%;
+	// 	@include m.pc{
+	// 		padding: 30% 64px 10%;
+	// 	}
+	// 	&--button {
+	// 		width: 42%;
+	// 		position: relative;
+	// 		&::after {
+	// 			content: url(../../assets/img/scrollArrow.png);
+	// 			position: absolute;
+	// 			top: 60%;
+	// 			left: 57px;
+	// 			animation: pathmove 1.4s ease-in-out infinite;
+	// 			opacity: 0;
+	// 			@include m.pc{
+	// 				content: url(../../assets/img/scrollArrow_pc.png);
+	// 				top: 60%;
+	// 				left: 130px;
+	// 			}
+	// 		}
+	// 		// @keyframes pathmove {
+	// 		// 	0% {
+	// 		// 	  height: 0;
+	// 		// 	  top: 60%;
+	// 		// 	  opacity: 0;
+	// 		// 	}
+	// 		// 	30% {
+	// 		// 	  height: 50px;
+	// 		// 	  opacity: 1;
+	// 		// 	}
+	// 		// 	100% {
+	// 		// 	  height: 0;
+	// 		// 	  top: 70%;
+	// 		// 	  opacity: 0;
+	// 		// 	}
+	// 		//   }
+	// 	}
+	// 	&--text {
+	// 		width: 65%;
+	// 		color: #FFF;
+	// 		font-size: 14px;
+	// 		font-weight: 700;
+	// 		line-height: 20px;
+	// 		@include m.pc{
+	// 			font-size: 24px;
+	// 			line-height: 40px;
+	// 			margin-top: -25%;
+	// 			margin-left: 37%;
+	// 		}
+	// 	}
+	// }
+
+// スクロールダウン
+.top__scrollDownWrap{
+	position:absolute;
+	bottom: 20px;
+	left:34px;
+	@include m.pc{
+		bottom:56px;
+		left:164px;
+	}
+}
+.scrollDown{
+	position:relative;
+	width:110px;
+	height:110px;
+	border-radius: 50%;
+	background-color: #324658;
+	@include m.pc{
+		width:267px;
+		height:267px;
+	}
+	&::after {
+		content: url(../../assets/img/scrollArrow.png);
+		position: absolute;
+		top: 60%;
+		left: 57px;
+		animation: pathmove 1.4s ease-in-out infinite;
+		opacity: 0;
+		@include m.pc{
+			content: url(../../assets/img/scrollArrow_pc.png);
+			top: 60%;
+			left: 130px;
+		}
+	}
+	@keyframes pathmove {
+		0% {
+		height: 0;
+		top: 60%;
+		opacity: 0;
+		}
+		30% {
+		height: 50px;
+		opacity: 1;
+		}
+		100% {
+		height: 0;
+		top: 70%;
+		opacity: 0;
+		}
+	}
+	&__text{
+		color:white;
+		padding-top: 25px;
+		text-align: center;
+		font-size: 11px;
+		font-weight: 700;
+		line-height: 1.7;
+		@include m.pc{
+			font-size:25px;
+			padding-top: 70px;
+			line-height: 1.52;
 		}
 	}
 }

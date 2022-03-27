@@ -21,7 +21,7 @@ $(function () {
   // モーダル開く
   $('.card__item').on('click', function () {
     var index = $(this).index();//クリックした要素のインデックスを取得
-    swiper.slideTo(index);//指定のスライドを呼び出し
+    swiper.slideTo(index,0);//指定のスライドを呼び出し
     $('.ModalLayer').addClass('isShow');
   });
   $('.ModalLayer-Mask').on('click', function () {

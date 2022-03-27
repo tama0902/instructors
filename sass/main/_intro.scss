@@ -3,6 +3,10 @@
 
 @use "../foundation/various" as v;
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+@font-face {
+	font-family: digitalNumber;
+	src: url(../../assets/fonts/number_b.woff) format('woff');
+}
 
 .intro {
 	font-family: v.$base_font;
@@ -15,9 +19,9 @@
 		}
 	}
 	.layout1 {
-		padding: 0 0 112px;
+		padding: 0 0 122px;
 		@include m.pc{
-			padding-bottom: 148px;
+			padding-bottom: 168px;
 		}
 	}
 	.layout2 {
@@ -64,6 +68,7 @@
 		transform: skewY(0deg);
 	}
 	.layout10 {
+		position: relative;
 		background-color: #324658;
 		transform: skewY(-23deg);
 		@include m.pc {
@@ -109,22 +114,6 @@
 		background-color: #f0f0f0;
 		position: relative;
 		z-index: 0;
-		//&::before {
-		//	content: "";
-		//	position: absolute;
-		//	top: 153px;
-		//	bottom: 143px;
-		//	left: 0;
-		//	right: 0;
-		//	transform: skewY(-23deg);
-		//	z-index: -1;
-		//	background-color: #324658;
-		//	@include m.pc {
-		//	transform: skewY(-15deg);
-		//	bottom: -60px;
-		//	top: 282px;
-		//	}
-		//}
 	}
 	&__name {
 		font-family: 'Noto Serif JP', serif;
@@ -138,6 +127,8 @@
 			font-size: 130px;
 		}
 		&--en {
+			position: relative;
+			z-index: 1;
 			font-family: v.$base_font;
 			font-size: 100px;
 			font-weight: 900;
@@ -149,10 +140,13 @@
 	}
 	&__ash {
 		position: relative;
-		padding-top: 35px;
+		padding-top: 30px;
+		@include m.pc{
+			padding-top: 20px;
+		}
 		span:nth-of-type(1){color:#437BB2}
 		span:nth-of-type(2){position: absolute; left: 90px; @include m.pc {left: 127px;}}
-		span:nth-of-type(3){font-size: 48px; position: absolute; top: 22px; left: 180px; @include m.pc {font-size: 74px; left: 261px;}}
+		span:nth-of-type(3){font-size: 48px; position: absolute; top: 17px; left: 180px; @include m.pc {font-size: 74px; top: 0; left: 261px;}}
 	}
 	&__ash--first {
 		position: relative;
@@ -161,7 +155,7 @@
 			position: absolute;
 			font-family: v.$base_font;
 			font-size: 20px;
-			color: #446fc8;
+			color: #437bb2;
 			bottom: -48px;
 			left: 5px;
 			@include m.pc {
@@ -185,7 +179,7 @@
 			position: absolute;
 			font-family: v.$base_font;
 			font-size: 20px;
-			color: #446fc8;
+			color: #437bb2;
 			bottom: -51px;
 			left: 1px;
 			@include m.pc {
@@ -219,24 +213,29 @@
 			flex-direction: column;
 			justify-content: flex-end;
 			position: relative;
+			margin-top: 20px;
 			@include m.pc{
+			margin-top: 0;
 			}
 		}
 		&--title {
 			color: #FFF;
 			font-size: 24px;
 			line-height: 42px;
-			font-weight: 900;
-			text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+			font-weight: 700;
 			text-align: end;
 			padding-right: 32px;
-			&:nth-of-type(2){margin-top: -27px;}
+			@include m.pc{
+				padding-right: 0px;
+			}
+			&:nth-of-type(2){margin-top: -10px;}
+			&:nth-of-type(3){margin-top: -2px;}
 			@include m.pc{
 			order: 1;
 			margin-top: -200px;
 			font-size: 50px;
 			line-height: 70px;
-			&:nth-of-type(2){margin-top: -46px;}
+			&:nth-of-type(2){margin-top: -23px;}
 			}
 		}
 		&--txt {
@@ -277,6 +276,7 @@
 				margin-left: auto;
 				@include m.pc{
 				width: 61%;
+				margin-top: -180px;
 				}
 			}
 		} 
@@ -300,9 +300,9 @@
 			right: 0;
 			transform: skewY(-23deg);
 			z-index: -1;
-			background:-moz-linear-gradient(right, #243C74, #2EB6C5);
-			background:-webkit-linear-gradient(right, #243C74, #2EB6C5);
-			background:linear-gradient(to right, #243C74, #2EB6C5);
+			background:-moz-linear-gradient(135deg, rgba(18,42,82,1) 0%, rgba(55,104,198,1) 50%, rgba(49,202,219,1) 100%);
+			background:-webkit-linear-gradient(135deg, rgba(18,42,82,1) 0%, rgba(55,104,198,1) 50%, rgba(49,202,219,1) 100%);
+			background: linear-gradient(135deg, rgba(18,42,82,1) 0%, rgba(55,104,198,1) 50%, rgba(49,202,219,1) 100%);
 			@include m.pc {
 			transform: skewY(-15deg);
 			bottom: -300px;
@@ -342,5 +342,41 @@
 		background-color: rgba(255, 255, 255, 0.85);
 		padding: 16px 24px;
 
+	}
+}
+.number_s {
+	font-family: 'digitalNumber';
+	color: #FFF;
+	font-size: 30px;
+	margin-right: 5px;
+	@include m.pc{
+		font-size: 60px;
+		margin-right: 10px;
+	}
+}
+.number_l {
+	font-family: 'digitalNumber';
+	font-weight: bold;
+	color: #31cabd;
+	background: -webkit-linear-gradient(-135deg, #31cabd, #3768cb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 48px;
+	margin-right: 2px;
+	@include m.pc{
+		font-size: 104px;
+	}
+}
+.number_l-og {
+	font-family: 'digitalNumber';
+	font-weight: bold;
+	color: #31cabd;
+	background: -webkit-linear-gradient(-135deg, #31cabd, #3768cb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 48px;
+	margin-right: 10px;
+	@include m.pc{
+		font-size: 104px;
 	}
 }

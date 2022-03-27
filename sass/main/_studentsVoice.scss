@@ -9,6 +9,9 @@
     text-align: center;
     color:white;
     position: relative;
+	  @include m.pc{
+    	font-size: 25px;
+	  }
   }
   &__title::before{
     content:"";
@@ -19,6 +22,9 @@
     width:40px;
     height:2px;
     background-color: white;
+	  @include m.pc{
+    	width:60px;
+	  }
   }
   &__text{
     font-size:16px;

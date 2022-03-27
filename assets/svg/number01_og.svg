@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.65" height="53.2" viewBox="0 0 56.65 53.2"><defs><filter id="a" x="0" y="0" width="56.65" height="53.2" filterUnits="userSpaceOnUse"><feOffset input="SourceAlpha"/><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-opacity="0.161"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/></filter></defs><g transform="translate(-13240 -2825)"><g transform="matrix(1, 0, 0, 1, 13240, 2825)" filter="url(#a)"><path d="M-11.252-13.021l-1.392,1.189-1.044-1.189,1.073-7.54,1.392-1.218,1.015,1.218ZM-12.7-2.639l-1.392,1.218-1.044-1.218,1.044-7.54,1.392-1.189,1.044,1.189Zm8.845,1.421L-5.22,0h-7.656L-13.92-1.218l1.392-1.218H-4.9ZM-2.2-2.639-3.6-1.421-4.64-2.639l1.044-7.54L-2.2-11.368l1.044,1.189Zm1.45-10.382-1.392,1.189L-3.19-13.021l1.073-7.54,1.363-1.218L.29-20.561Zm-.174-8.961L-2.32-20.764H-9.947l-1.044-1.218L-9.6-23.2h7.627Zm11.165,8.961L8.874-11.8,7.859-13.021l1.247-8.99L10.469-23.2l1.044,1.189Zm-2.117-5.1L6.67-16.878l-.957-1.1.174-1.189,2.726-2.407ZM8.584-1.189,7.221,0,6.177-1.1l1.276-9.077L8.816-11.4l1.015,1.218Z" transform="translate(30.14 38.2)" fill="#fff"/></g><rect width="32" height="24" transform="translate(13252 2840)" fill="none"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.65" height="53.2" viewBox="0 0 56.65 53.2">
+  <defs>
+    <filter id="パス_1704" x="0" y="0" width="56.65" height="53.2" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#パス_1704)">
+    <path id="パス_1704-2" data-name="パス 1704" d="M-11.252-13.021l-1.392,1.189-1.044-1.189,1.073-7.54,1.392-1.218,1.015,1.218ZM-12.7-2.639l-1.392,1.218-1.044-1.218,1.044-7.54,1.392-1.189,1.044,1.189Zm8.845,1.421L-5.22,0h-7.656L-13.92-1.218l1.392-1.218H-4.9ZM-2.2-2.639-3.6-1.421-4.64-2.639l1.044-7.54L-2.2-11.368l1.044,1.189Zm1.45-10.382-1.392,1.189L-3.19-13.021l1.073-7.54,1.363-1.218L.29-20.561Zm-.174-8.961L-2.32-20.764H-9.947l-1.044-1.218L-9.6-23.2h7.627Zm11.165,8.961L8.874-11.8,7.859-13.021l1.247-8.99L10.469-23.2l1.044,1.189Zm-2.117-5.1L6.67-16.878l-.957-1.1.174-1.189,2.726-2.407ZM8.584-1.189,7.221,0,6.177-1.1l1.276-9.077L8.816-11.4l1.015,1.218Z" transform="translate(30.14 38.2)" fill="#fff"/>
+  </g>
+</svg>

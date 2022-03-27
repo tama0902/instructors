@@ -19,9 +19,7 @@ main {
 	background-color: #fff;
 	z-index: 100;
 	@include m.pc{
-		display: flex;
 		padding: 8px 8.3%;
-		background-color: #fff;
 	}
 	&__bar {
 		background-color: #fff;
@@ -29,9 +27,6 @@ main {
 		justify-content: space-between;
 		align-items: center;
 		padding: 8px 16px;
-		@include m.pc{
-			display: flex;
-		}
 	}
 }
 
@@ -40,18 +35,22 @@ main {
   menuButton
 ====================*/
 .menuButton {
-	@include m.pc{
-		display: none;
-	}
+	//@include m.pc{
+	//	display: none;
+	//}
 	&__inner {
 		width: 32px;
 		height: 32px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include m.pc{
+			width: 40px;
+			height: 40px;
+		}
 		&--bar {
 			position: relative;
-			width: 32px;
+			width: 40px;
 			height: 2px;
 			background-color: #446fc8;
 			transition: .4s;
@@ -76,6 +75,9 @@ main {
 	&__text {
 		font-size: 11px;
 		margin-top: -10px;
+		@include m.pc{
+		font-size: 14px;
+		}
 	}
 }
 #menu:checked ~ .header__bar .menuButton__inner--bar {
@@ -109,15 +111,13 @@ main {
 	background: rgba(255, 255, 255, .95);
 		transition: .6s;
 	@include m.pc{
-		position: static;
-		display: flex;
-		justify-content: flex-end;
+		top: 86px;
 	}
-	&__wrapper {
-		@include m.pc{
-			display: flex;
-		}
-	}
+	//&__wrapper {
+	//	//@include m.pc{
+	//	//	display: flex;
+	//	//}
+	//}
 	&__link {
 		color: #000;
 		display: block;
@@ -125,13 +125,13 @@ main {
 		line-height: 72px;
 		display: flex;
 		justify-content: center;
-		@include m.pc{
-			width: auto;
-			margin-right: 48px;
-			text-align: center;
-		}
-		@media screen and (min-width:1024px) and ( max-width:1270px) {
-			margin-right: 20px;
-		}
+		//@include m.pc{
+		//	width: auto;
+		//	margin-right: 48px;
+		//	text-align: center;
+		//}
+		//@media screen and (min-width:1024px) and ( max-width:1270px) {
+		//	margin-right: 20px;
+		//}
 	}
 }

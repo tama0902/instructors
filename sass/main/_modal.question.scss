@@ -43,8 +43,11 @@
   position: absolute;
   background: rgba(50,70,88,0.5);
   width: 100%;
-  height: 100vh;
+  height:calc(100vh + 100px);//追加
+
+  
 }
+
 .ModalLayer-Inner{
   position: absolute;
   top: 50%;
@@ -60,15 +63,15 @@
   &-Inner{
     &-Btn{
       position: absolute;
-      top: 64px;
-      right: -10px;
+      top: 84px;
+      right: -8px;
       width: 70px;
       color: #fff;
       z-index: 10;
       cursor: pointer;
 	  @include m.pc{
-      top: 80px;
-      right: -26px;
+      top: 98px;
+      right: -10px;
 	}
       img{
         display:block;
@@ -87,11 +90,13 @@
           width:100% !important;
           height:auto;
           &-Item{
-            padding:18px;
+            padding:32px 18px;//追加
             border-radius: 16px;
 			margin-top: 50px;
+			margin-top: 70px;//追加
             width :90%;
-            height: 85vh;
+            // height: 85vh;
+            height: 88vh;
             background: #ffffff;
             @include m.pc{
               padding:36px;
@@ -113,11 +118,11 @@
 }
 .swiper-button-next--blue{
   background-image: url(../../assets/img/swiper_before_button--blue.png);
-  left:40px;
+  left:30%;
 }
 .swiper-button-prev--blue{
   background-image: url(../../assets/img/swiper_after_button--blue.png);
-  right:40px;
+  right:30%;
 }
 .swiper-button-prev--blue, .swiper-button-next--blue {
   width: 36px;
@@ -128,11 +133,11 @@
   position:absolute;
 }
 .swiper-button-prev--blue {
-  bottom:10px;
+  bottom: 5%;
 
 }
 .swiper-button-next--blue {
-  bottom:10px;
+  bottom:5%;
 }
 
 /* ---------------------------- */
@@ -144,7 +149,7 @@
     position:relative;
     font-size:18px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.35;
     color:#324658;
     @include m.pc{
       font-size: 20px;
@@ -197,9 +202,12 @@
     }
   }
   &__text{
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.45;
     text-align:left;
+	span {
+    	font-size: 11px;
+	}
     @include m.pc{
       font-size: 14px;
       line-height: 1.5;
@@ -222,4 +230,3 @@
   margin-bottom:40px;
   }
 }
-

@@ -17,6 +17,7 @@
   position:relative;
   display:inline-block;
   color:white;
+  font-weight: 700;
   @include m.pc{
     padding: 60px 0;
     font-size:28px ;

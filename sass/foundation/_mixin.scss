@@ -24,7 +24,7 @@ $pc:1024px;/*PCサイズ */
 @mixin underbar{
   position:absolute;
   width:40px;
-  height:1px;
+  height:2px;
   content:"";
   bottom:-32px;
   right:50%;
@@ -40,7 +40,7 @@ $pc:1024px;/*PCサイズ */
 @mixin underbar_b{
   position:absolute;
   width:40px;
-  height:1px;
+  height:2px;
   content:"";
   bottom:-32px;
   right:50%;
