@@ -113,11 +113,6 @@ main {
 	@include m.pc{
 		top: 86px;
 	}
-	//&__wrapper {
-	//	//@include m.pc{
-	//	//	display: flex;
-	//	//}
-	//}
 	&__link {
 		color: #000;
 		display: block;
@@ -125,13 +120,5 @@ main {
 		line-height: 72px;
 		display: flex;
 		justify-content: center;
-		//@include m.pc{
-		//	width: auto;
-		//	margin-right: 48px;
-		//	text-align: center;
-		//}
-		//@media screen and (min-width:1024px) and ( max-width:1270px) {
-		//	margin-right: 20px;
-		//}
 	}
 }
