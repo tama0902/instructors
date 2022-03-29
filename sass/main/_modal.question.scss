@@ -117,12 +117,12 @@
   }
 }
 .swiper-button-next--blue{
-  background-image: url(../../assets/img/swiper_before_button--blue.png);
-  left:30%;
-}
-.swiper-button-prev--blue{
   background-image: url(../../assets/img/swiper_after_button--blue.png);
   right:30%;
+}
+.swiper-button-prev--blue{
+  background-image: url(../../assets/img/swiper_before_button--blue.png);
+  left:30%;
 }
 .swiper-button-prev--blue, .swiper-button-next--blue {
   width: 36px;
